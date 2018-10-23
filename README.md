@@ -18,3 +18,7 @@ Next moves:
   - **babel**: transpile all js code that use es6 and JSX to make able node to read it;
   - **build**: pack + babel, create the build but not serve it;
   - **prepare**: create the build and serve it on localhost:3000;
+
+# Articles
+- Server side rendering: https://medium.freecodecamp.org/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e
+- Server side styled-component: https://medium.com/styled-components/the-simple-guide-to-server-side-rendering-react-with-styled-components-d31c6b2b8fbf
