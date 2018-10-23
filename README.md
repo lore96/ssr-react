@@ -4,6 +4,7 @@ Here you have an example of a ssr application renderizing a create-react-app.
 At the final step you should be able to have **Redux** + **Styled Component** + **Routing** + **Node js Api** in a single awesome application!
 
 Next moves: 
+ 
  ✅SVG Support (to recreate exactly the create react application); (fixed with branch svgImport)
  - fixing localhost:3000/client implementation;
  - set a routing for server side rendering;
