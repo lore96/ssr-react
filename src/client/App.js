@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+import logo from '../../assets/logo.svg';
+
+console.log(logo);
 
 // Our single Styled Component definition
 // const EmojiContainerDiv = styled.div`
@@ -32,17 +36,31 @@ const AppLink = styled.a`
     color: #61dafb;
 `;
 
+const AppLogoSpinAnimation = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`
+
+const AppLogo = styled.img`
+  animation: ${AppLogoSpinAnimation} infinite 20s linear;
+  height: 40vmin;
+`;
+
 class App extends Component {
   render() {
     // return (<EmojiContainerDiv><span role="img" aria-label="emoji">💅</span></EmojiContainerDiv>
     return(
       <AppContainer>
         <AppHeader>
+          <AppLogo src='../../assets/logo.svg' alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
           <AppLink
-            className="App-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
