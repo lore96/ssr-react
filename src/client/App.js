@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import logo from '../../assets/logo.svg';
-
-console.log(logo);
+import LogoIcon from './components/LogoIcon/LogoIcon';
 
 // Our single Styled Component definition
 // const EmojiContainerDiv = styled.div`
@@ -45,7 +43,7 @@ const AppLogoSpinAnimation = keyframes`
   }
 `
 
-const AppLogo = styled.img`
+const LogoSvg = styled.svg`
   animation: ${AppLogoSpinAnimation} infinite 20s linear;
   height: 40vmin;
 `;
@@ -56,7 +54,7 @@ class App extends Component {
     return(
       <AppContainer>
         <AppHeader>
-          <AppLogo src='../../assets/logo.svg' alt="logo" />
+          <LogoIcon />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
