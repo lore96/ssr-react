@@ -1,0 +1,7 @@
+{
+    "presets": ["@babel/env", "@babel/react"],
+    "plugins": [
+        "inline-react-svg",
+        "babel-plugin-styled-components"
+    ]
+}
