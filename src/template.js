@@ -19,7 +19,7 @@ function template(title, initialState = {}, styles, content = ""){
                 <body>
                   <div class="content">
                      <div id="root" class="wrap-inner">
-                        <!--- magic happens here -->  ${content}
+                        ${content}
                      </div>
                   </div>
                     ${scripts}

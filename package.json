@@ -13,10 +13,11 @@
     "styled-components": "^4.0.2"
   },
   "scripts": {
-    "start": "node index.js",
+    "ssr-start": "node index.js",
     "pack": "webpack --config webpack.config.js",
     "babel": "babel src -d views",
-    "build": "npm run pack && npm run babel"
+    "build": "npm run pack && npm run babel",
+    "prepare": "npm run babel && npm run pack && npm run ssr-start"
   },
   "eslintConfig": {
     "extends": "react-app"

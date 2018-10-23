@@ -32,10 +32,30 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 // Our single Styled Component definition
-var EmojiContainerDiv = _styledComponents.default.div.withConfig({
-  displayName: "App__EmojiContainerDiv",
+// const EmojiContainerDiv = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   font-size: 40px;
+//   background: linear-gradient(20deg, rgb(219, 112, 147), #daa357);
+// `;
+var AppContainer = _styledComponents.default.div.withConfig({
+  displayName: "App__AppContainer",
   componentId: "sc-1xbx0kc-0"
-})(["display:flex;align-items:center;justify-content:center;position:fixed;width:100%;height:100%;font-size:40px;background:linear-gradient(20deg,rgb(219,112,147),#daa357);"]);
+})(["text-align:center;"]);
+
+var AppHeader = _styledComponents.default.div.withConfig({
+  displayName: "App__AppHeader",
+  componentId: "sc-1xbx0kc-1"
+})(["background-color:#282c34;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;"]);
+
+var AppLink = _styledComponents.default.a.withConfig({
+  displayName: "App__AppLink",
+  componentId: "sc-1xbx0kc-2"
+})(["color:#61dafb;"]);
 
 var App =
 /*#__PURE__*/
@@ -51,10 +71,13 @@ function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(EmojiContainerDiv, null, _react.default.createElement("span", {
-        role: "img",
-        "aria-label": "emoji"
-      }, "\uD83D\uDC85"));
+      // return (<EmojiContainerDiv><span role="img" aria-label="emoji">💅</span></EmojiContainerDiv>
+      return _react.default.createElement(AppContainer, null, _react.default.createElement(AppHeader, null, _react.default.createElement("p", null, "Edit ", _react.default.createElement("code", null, "src/App.js"), " and save to reload."), _react.default.createElement(AppLink, {
+        className: "App-link",
+        href: "https://reactjs.org",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }, "Learn React")));
     }
   }]);
 

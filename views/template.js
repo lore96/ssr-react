@@ -12,7 +12,7 @@ function template(title) {
     scripts = " <script src=\"../assets/bundle.js\"> </script> ";
   }
 
-  var page = "<!DOCTYPE html>\n                <html lang=\"en\">\n                <head>\n                  <meta charset=\"utf-8\">\n                  <title> ".concat(title, " </title>\n                  ").concat(styles, "\n                </head>\n                <body>\n                  <div class=\"content\">\n                     <div id=\"root\" class=\"wrap-inner\">\n                        <!--- magic happens here -->  ").concat(content, "\n                     </div>\n                  </div>\n                    ").concat(scripts, "\n                </body>\n                </html>\n                ");
+  var page = "<!DOCTYPE html>\n                <html lang=\"en\">\n                <head>\n                  <meta charset=\"utf-8\">\n                  <title> ".concat(title, " </title>\n                  ").concat(styles, "\n                </head>\n                <body>\n                  <div class=\"content\">\n                     <div id=\"root\" class=\"wrap-inner\">\n                        ").concat(content, "\n                     </div>\n                  </div>\n                    ").concat(scripts, "\n                </body>\n                </html>\n                ");
   return page;
 }
 
