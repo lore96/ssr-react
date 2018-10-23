@@ -51,19 +51,10 @@ function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
-        className: "App"
-      }, _react.default.createElement("header", {
-        className: "App-header"
-      }, _react.default.createElement("p", null, _react.default.createElement(EmojiContainerDiv, null, _react.default.createElement("span", {
+      return _react.default.createElement(EmojiContainerDiv, null, _react.default.createElement("span", {
         role: "img",
         "aria-label": "emoji"
-      }, "\uD83D\uDC85")), "Edit ", _react.default.createElement("code", null, "src/App.js"), " and save to reload."), _react.default.createElement("a", {
-        className: "App-link",
-        href: "https://reactjs.org",
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, "Learn React")));
+      }, "\uD83D\uDC85"));
     }
   }]);
 

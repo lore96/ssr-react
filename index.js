@@ -3,9 +3,6 @@ const app = express();
 const template = require('./views/template');
 const path = require('path');
 
-const renderToString = require('react-dom/server').renderToString;
-const ServerStylesheet = require('styled-components').ServerStylesheet;
-
 // Serving static files
 app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
 app.use('/media', express.static(path.resolve(__dirname, 'media')));
@@ -29,14 +26,9 @@ const ssr = require('./views/server');
 // server rendered home page
 app.get('/', (req, res) => {
 
-    const sheet = new ServerStylesheet();
+    const { preloadedState, content, styleTags} = ssr(initialState);
 
-    const { preloadedState, content}  = ssr(initialState)
-
-    const body = renderToString(sheet.collectStyles(content));
-    const styles = sheet.getStyleTags();
-
-    const response = template("Server Rendered Page", preloadedState, styles, body);
+    const response = template("Server Rendered Page", preloadedState, styleTags, content);
     res.setHeader('Cache-Control', 'assets, max-age=604800');
     res.send(response);
 });
