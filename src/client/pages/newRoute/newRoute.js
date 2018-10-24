@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import LogoIcon from '../../components/LogoIcon/LogoIcon';
+import { NavLink } from 'react-router-dom';
+
 
 const AnotherContainer = styled.div`
     text-align: center;
@@ -36,6 +38,7 @@ class newRoute extends Component {
           >
             Go home
           </AnotherLink>
+          <NavLink to="/">Go home with Link</NavLink>
         </AnotherHeader>
       </AnotherContainer>
     );

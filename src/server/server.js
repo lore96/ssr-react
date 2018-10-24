@@ -1,12 +1,12 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
-import configureStore from './redux/configureStore';
-import App from './client/App';
+import configureStore from '../redux/configureStore';
+import App from '../client/App';
 
 import { ServerStyleSheet } from 'styled-components';
 import { StaticRouter,  matchPath } from "react-router-dom"
-import routes from './shared/routes'
+import routes from '../shared/routes'
 
 
 module.exports = function render(initialState, applicationRoute, callback) {

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const template = require('./views/template');
+const template = require('./views/server/template');
 const path = require('path');
 
 // Serving static files
@@ -21,7 +21,7 @@ let initialState = {
 }
 
 //SSR function import
-const ssr = require('./views/server');
+const ssr = require('./views/server/server');
 
 // server rendered home page
 app.get('*', (req, res, next) => {

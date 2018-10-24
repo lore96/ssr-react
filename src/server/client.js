@@ -1,8 +1,8 @@
 import React from 'react';
 import {hydrate} from 'react-dom';
 import {Provider} from 'react-redux';
-import configureStore from './redux/configureStore';
-import App from './client/App';
+import configureStore from '../redux/configureStore';
+import App from '../client/App';
 import { BrowserRouter } from 'react-router-dom';
 
 const state = window.__STATE__;

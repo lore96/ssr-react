@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import LogoIcon from '../../components/LogoIcon/LogoIcon';
 
+import { NavLink } from 'react-router-dom';
+
 const HomeContainer = styled.div`
     text-align: center;
 `;
@@ -36,6 +38,7 @@ class Home extends Component {
           >
             Switch Page
           </HomeLink>
+          <NavLink to="/newroute">New Route with Link</NavLink>
         </HomeHeader>
       </HomeContainer>
     );

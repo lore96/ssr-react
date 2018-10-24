@@ -1,8 +1,8 @@
 import React from 'react'
 import {render} from 'react-dom'
 import {Provider} from 'react-redux'
-import configureStore from './redux/configureStore'
-import App from './client/App';
+import configureStore from '../redux/configureStore'
+import App from '../client/App';
 import { BrowserRouter } from 'react-router-dom';
 
 const store = configureStore();
@@ -13,5 +13,5 @@ render(
      <App fetchedData={window.__INITIAL_DATA__}/>
     </BrowserRouter>
   </Provider>,
-  document.querySelector('#app')
+  document.querySelector('#root')
 )

@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    client: './src/client.js',
-    bundle: './src/bundle.js'
+    client: './src/server/client.js',
+    bundle: './src/server/bundle.js'
   },
   output: {
     path: path.resolve(__dirname, 'assets'),
