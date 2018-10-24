@@ -53,7 +53,7 @@ function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _routes.default.map(function (_ref) {
+      return _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Switch, null, _routes.default.map(function (_ref) {
         var path = _ref.path,
             exact = _ref.exact,
             Page = _ref.component,
@@ -67,7 +67,7 @@ function (_Component) {
             return _react.default.createElement(Page, _extends({}, props, rest));
           }
         });
-      }));
+      })));
     }
   }]);
 

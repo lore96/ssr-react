@@ -8,6 +8,10 @@ import { ServerStyleSheet } from 'styled-components';
 import { StaticRouter,  matchPath } from "react-router-dom"
 import routes from '../shared/routes'
 
+import Loadable from 'react-loadable';
+import { getBundles } from 'react-loadable/webpack'
+import stats from '../../assets/react-loadable.json';
+
 
 module.exports = function render(initialState, applicationRoute, callback) {
     const activeRoute = routes.find((route) => matchPath(applicationRoute.req.url, route)) || {};
@@ -15,24 +19,30 @@ module.exports = function render(initialState, applicationRoute, callback) {
     const promise = activeRoute.fetchData ? activeRoute.fetchData(applicationRoute.req.path) : Promise.resolve();
 
     promise.then((data) => {
+        let modules = [];
+
         const sheet = new ServerStyleSheet();
     
         // Model the initial state
         const store = configureStore(initialState);
         
         let content = renderToString(
-            <Provider store={store} >
-                <StaticRouter location={applicationRoute.req.url} context={{}}>
-                    {sheet.collectStyles(<App fetchedData={data}/>)}    
-                </StaticRouter>
-            </Provider>
+            <Loadable.Capture report={moduleName => modules.push(moduleName)}>
+                <Provider store={store} >
+                    <StaticRouter location={applicationRoute.req.url} context={{}}>
+                        {sheet.collectStyles(<App fetchedData={data}/>)}    
+                    </StaticRouter>
+                </Provider>
+            </Loadable.Capture>
         );
+
+        let bundles = getBundles(stats, modules);
 
         const styleTags = sheet.getStyleTags();
     
         const preloadedState = store.getState();
     
-        callback(content, preloadedState, styleTags, data);
+        callback(content, preloadedState, styleTags, data, bundles);
     }).catch(applicationRoute.next);
 
    

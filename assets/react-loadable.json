@@ -1,0 +1,618 @@
+{
+  "react": [
+    {
+      "id": 0,
+      "name": "./node_modules/react/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 0,
+      "name": "./node_modules/react/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "prop-types": [
+    {
+      "id": 1,
+      "name": "./node_modules/prop-types/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 1,
+      "name": "./node_modules/prop-types/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "warning": [
+    {
+      "id": 2,
+      "name": "./node_modules/history/node_modules/warning/browser.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 5,
+      "name": "./node_modules/warning/warning.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 2,
+      "name": "./node_modules/history/node_modules/warning/browser.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    },
+    {
+      "id": 5,
+      "name": "./node_modules/warning/warning.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "invariant": [
+    {
+      "id": 3,
+      "name": "./node_modules/invariant/browser.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 3,
+      "name": "./node_modules/invariant/browser.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "styled-components": [
+    {
+      "id": 4,
+      "name": "./node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 4,
+      "name": "./node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "../../components/LogoIcon/LogoIcon": [
+    {
+      "id": 6,
+      "name": "./src/client/components/LogoIcon/LogoIcon.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 6,
+      "name": "./src/client/components/LogoIcon/LogoIcon.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "react-loadable": [
+    {
+      "id": 7,
+      "name": "./node_modules/react-loadable/lib/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 7,
+      "name": "./node_modules/react-loadable/lib/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "redux": [
+    {
+      "id": 8,
+      "name": "./node_modules/redux/es/redux.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 8,
+      "name": "./node_modules/redux/es/redux.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "react-dom": [
+    {
+      "id": 10,
+      "name": "./node_modules/react-dom/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 10,
+      "name": "./node_modules/react-dom/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "react-router/es/matchPath": [
+    {
+      "id": 11,
+      "name": "./node_modules/react-router/es/matchPath.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 11,
+      "name": "./node_modules/react-router/es/matchPath.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "history": [
+    {
+      "id": 12,
+      "name": "./node_modules/history/es/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 12,
+      "name": "./node_modules/history/es/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./NavLink": [
+    {
+      "id": 13,
+      "name": "./node_modules/react-router-dom/es/NavLink.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 13,
+      "name": "./node_modules/react-router-dom/es/NavLink.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "symbol-observable": [
+    {
+      "id": 14,
+      "name": "./node_modules/symbol-observable/es/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 14,
+      "name": "./node_modules/symbol-observable/es/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "stylis/stylis.min": [
+    {
+      "id": 15,
+      "name": "./node_modules/stylis/stylis.min.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 15,
+      "name": "./node_modules/stylis/stylis.min.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "react-is": [
+    {
+      "id": 16,
+      "name": "./node_modules/react-is/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 16,
+      "name": "./node_modules/react-is/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "memoize-one": [
+    {
+      "id": 17,
+      "name": "./node_modules/memoize-one/dist/memoize-one.esm.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 17,
+      "name": "./node_modules/memoize-one/dist/memoize-one.esm.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "object-assign": [
+    {
+      "id": 18,
+      "name": "./node_modules/object-assign/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 18,
+      "name": "./node_modules/object-assign/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./../../webpack/buildin/global.js": [
+    {
+      "id": 19,
+      "name": "./node_modules/webpack/buildin/global.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 19,
+      "name": "./node_modules/webpack/buildin/global.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./../../webpack/buildin/harmony-module.js": [
+    {
+      "id": 20,
+      "name": "./node_modules/webpack/buildin/harmony-module.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 20,
+      "name": "./node_modules/webpack/buildin/harmony-module.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "../client/pages/home/home": [
+    {
+      "id": 21,
+      "name": "./src/client/pages/home/home.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 21,
+      "name": "./src/client/pages/home/home.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "../client/pages/newRoute/newRoute": [
+    {
+      "id": 22,
+      "name": "./src/client/pages/newRoute/newRoute.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 22,
+      "name": "./src/client/pages/newRoute/newRoute.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "../client/pages/test/test": [
+    {
+      "id": 23,
+      "name": "./src/client/pages/test/test.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 23,
+      "name": "./src/client/pages/test/test.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "hoist-non-react-statics": [
+    {
+      "id": 24,
+      "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 24,
+      "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./_freeGlobal.js": [
+    {
+      "id": 25,
+      "name": "./node_modules/lodash-es/_freeGlobal.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 25,
+      "name": "./node_modules/lodash-es/_freeGlobal.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./ponyfill.js": [
+    {
+      "id": 26,
+      "name": "./node_modules/symbol-observable/es/ponyfill.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 26,
+      "name": "./node_modules/symbol-observable/es/ponyfill.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "stylis-rule-sheet": [
+    {
+      "id": 27,
+      "name": "./node_modules/stylis-rule-sheet/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 27,
+      "name": "./node_modules/stylis-rule-sheet/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "path-to-regexp": [
+    {
+      "id": 28,
+      "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 28,
+      "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "react-redux": [
+    {
+      "id": 29,
+      "name": "./node_modules/react-redux/es/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 29,
+      "name": "./node_modules/react-redux/es/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "../redux/configureStore": [
+    {
+      "id": 30,
+      "name": "./src/redux/configureStore.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 30,
+      "name": "./src/redux/configureStore.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "../client/App": [
+    {
+      "id": 31,
+      "name": "./src/client/App.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 31,
+      "name": "./src/client/App.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./Route": [
+    {
+      "id": 32,
+      "name": "./node_modules/react-router-dom/es/Route.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 32,
+      "name": "./node_modules/react-router-dom/es/Route.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "@emotion/is-prop-valid": [
+    {
+      "id": 33,
+      "name": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.esm.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 33,
+      "name": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.esm.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./cjs/react.production.min.js": [
+    {
+      "id": 34,
+      "name": "./node_modules/react/cjs/react.production.min.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 34,
+      "name": "./node_modules/react/cjs/react.production.min.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./cjs/react-dom.production.min.js": [
+    {
+      "id": 35,
+      "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 35,
+      "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "schedule": [
+    {
+      "id": 36,
+      "name": "./node_modules/schedule/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 36,
+      "name": "./node_modules/schedule/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./cjs/schedule.production.min.js": [
+    {
+      "id": 37,
+      "name": "./node_modules/schedule/cjs/schedule.production.min.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 37,
+      "name": "./node_modules/schedule/cjs/schedule.production.min.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./factoryWithThrowingShims": [
+    {
+      "id": 38,
+      "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 38,
+      "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./lib/ReactPropTypesSecret": [
+    {
+      "id": 39,
+      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 39,
+      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./../../process/browser.js": [
+    {
+      "id": 40,
+      "name": "./node_modules/process/browser.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 40,
+      "name": "./node_modules/process/browser.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./cjs/react-is.production.min.js": [
+    {
+      "id": 41,
+      "name": "./node_modules/react-is/cjs/react-is.production.min.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 41,
+      "name": "./node_modules/react-is/cjs/react-is.production.min.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "isarray": [
+    {
+      "id": 42,
+      "name": "./node_modules/react-router/node_modules/isarray/index.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 42,
+      "name": "./node_modules/react-router/node_modules/isarray/index.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./BrowserRouter": [
+    {
+      "id": 43,
+      "name": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    },
+    {
+      "id": 43,
+      "name": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ],
+  "./src/server/client.js": [
+    {
+      "id": 44,
+      "name": "./src/server/client.js",
+      "file": "client.js",
+      "publicPath": "client.js"
+    }
+  ],
+  "./src/server/bundle.js": [
+    {
+      "id": 45,
+      "name": "./src/server/bundle.js",
+      "file": "bundle.js",
+      "publicPath": "bundle.js"
+    }
+  ]
+}

@@ -26,7 +26,7 @@ function receiveApps(json) {
 function fetchApps() {
   return function (dispatch) {
     dispatch(requestApps());
-    return fetch("assets/data.json").then(function (response) {
+    return fetch("shared/data.json").then(function (response) {
       return response.json();
     }).then(function (json) {
       return dispatch(receiveApps(json));

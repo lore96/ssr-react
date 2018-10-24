@@ -1,6 +1,6 @@
 import serialize from "serialize-javascript";
 
-function template(title, initialState = {}, styles, content = "", data){
+function template(title, initialState = {}, styles, content = "", data, bundles){
     let scripts = '';
     const dataToRender = data ? data : {test: true};
     if(content){
@@ -8,12 +8,11 @@ function template(title, initialState = {}, styles, content = "", data){
                      window.__STATE__ = ${JSON.stringify(initialState)}
                   </script>
                   <script>window.__INITIAL_DATA__ = ${serialize(dataToRender)}</script>
-                  <script src="../assets/client.js"></script>
                   `
     } else {
-      scripts = `<script>window.__INITIAL_DATA__ = ${serialize(dataToRender)}</script>
-                  <script src="../assets/bundle.js"> </script>`
+      scripts = `<script>window.__INITIAL_DATA__ = ${serialize(dataToRender)}</script>`
     }
+    
     let page = `<!DOCTYPE html>
                 <html lang="en">
                 <head>
@@ -28,6 +27,12 @@ function template(title, initialState = {}, styles, content = "", data){
                      </div>
                   </div>
                     ${scripts}
+                    ${bundles.map(bundle => {
+                      return `<script src="../../assets/${bundle.file}"></script>`
+                      // alternatively if you are using publicPath option in webpack config
+                      // you can use the publicPath value from bundle, e.g:
+                      // return `<script src="${bundle.publicPath}"></script>`
+                    }).join('\n')}
                 </body>
                 </html>
                 `;

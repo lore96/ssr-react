@@ -10,7 +10,7 @@ const HomeContainer = styled.div`
 `;
 
 const HomeHeader = styled.div`
-    background-color: #282c34;
+    background-color: #green;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,6 @@ class Home extends Component {
             Switch Page
           </HomeLink>
           <NavLink to="/newroute">New Route with Link</NavLink>
-          <NavLink to="/test">Test</NavLink>
         </HomeHeader>
       </HomeContainer>
     );

@@ -1,4 +1,5 @@
 const path = require('path');
+const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin;
 
 module.exports = {
   entry: {
@@ -14,5 +15,10 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
       { test: /\.(ttf|eot|otf|svg|png|jpg|gif)$/, loader: 'file-loader' }
     ]
- }
+  }, 
+  plugins: [
+    new ReactLoadablePlugin({
+      filename: './assets/react-loadable.json',
+    })
+  ],
 }

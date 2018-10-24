@@ -70,7 +70,9 @@ function (_Component) {
         href: "/newroute"
       }, "Switch Page"), _react.default.createElement(_reactRouterDom.NavLink, {
         to: "/newroute"
-      }, "New Route with Link")));
+      }, "New Route with Link"), _react.default.createElement(_reactRouterDom.NavLink, {
+        to: "/test"
+      }, "Test")));
     }
   }]);
 

@@ -5,20 +5,66 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _home = _interopRequireDefault(require("../client/pages/home/home"));
+var _react = _interopRequireDefault(require("react"));
 
-var _newRoute = _interopRequireDefault(require("../client/pages/newRoute/newRoute"));
+var _reactLoadable = _interopRequireDefault(require("react-loadable"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// shared/routes.js
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+var HomeComponent = (0, _reactLoadable.default)({
+  loader: function loader() {
+    return Promise.resolve().then(function () {
+      return _interopRequireWildcard(require("../client/pages/home/home"));
+    });
+  },
+  modules: ["../client/pages/home/home"],
+  webpack: function webpack() {
+    return [require.resolveWeak("../client/pages/home/home")];
+  },
+  loading: function loading() {
+    return _react.default.createElement("div", null, "Loading....");
+  }
+});
+var NewRouteComponent = (0, _reactLoadable.default)({
+  loader: function loader() {
+    return Promise.resolve().then(function () {
+      return _interopRequireWildcard(require("../client/pages/newRoute/newRoute"));
+    });
+  },
+  modules: ["../client/pages/newRoute/newRoute"],
+  webpack: function webpack() {
+    return [require.resolveWeak("../client/pages/newRoute/newRoute")];
+  },
+  loading: function loading() {
+    return _react.default.createElement("div", null, "Loading....");
+  }
+});
+var test = (0, _reactLoadable.default)({
+  loader: function loader() {
+    return Promise.resolve().then(function () {
+      return _interopRequireWildcard(require("../client/pages/test/test"));
+    });
+  },
+  modules: ["../client/pages/test/test"],
+  webpack: function webpack() {
+    return [require.resolveWeak("../client/pages/test/test")];
+  },
+  loading: function loading() {
+    return _react.default.createElement("div", null, "Loading....");
+  }
+});
 var routes = [{
   path: '/',
   exact: true,
-  component: _home.default
+  component: HomeComponent
 }, {
   path: '/newroute',
-  component: _newRoute.default
+  component: NewRouteComponent
+}, {
+  path: '/test',
+  component: test
 }];
 var _default = routes;
 exports.default = _default;

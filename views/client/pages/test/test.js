@@ -9,6 +9,10 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _LogoIcon = _interopRequireDefault(require("../../components/LogoIcon/LogoIcon"));
+
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -31,28 +35,47 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var List =
+var HomeContainer = _styledComponents.default.div.withConfig({
+  displayName: "test__HomeContainer",
+  componentId: "tr39pk-0"
+})(["text-align:center;"]);
+
+var HomeHeader = _styledComponents.default.div.withConfig({
+  displayName: "test__HomeHeader",
+  componentId: "tr39pk-1"
+})(["background-color:#green;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;"]);
+
+var HomeLink = _styledComponents.default.a.withConfig({
+  displayName: "test__HomeLink",
+  componentId: "tr39pk-2"
+})(["color:#61dafb;"]);
+
+var Home =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(List, _Component);
+  _inherits(Home, _Component);
 
-  function List() {
-    _classCallCheck(this, List);
+  function Home() {
+    _classCallCheck(this, Home);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(List).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
   }
 
-  _createClass(List, [{
+  _createClass(Home, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("a", {
-        href: "/"
-      }, "Go home"), _react.default.createElement("ul", null, _react.default.createElement("li", null, "1"), _react.default.createElement("li", null, "2"), _react.default.createElement("li", null, "3"), _react.default.createElement("li", null, "4"), _react.default.createElement("li", null, "5")));
+      return _react.default.createElement(HomeContainer, null, _react.default.createElement(HomeHeader, null, _react.default.createElement(_LogoIcon.default, {
+        color: "#61DAFB"
+      }), _react.default.createElement("p", null, "Hi, I'm your react home page!"), _react.default.createElement(HomeLink, {
+        href: "/newroute"
+      }, "Switch Page"), _react.default.createElement(_reactRouterDom.NavLink, {
+        to: "/newroute"
+      }, "New Route with Link")));
     }
   }]);
 
-  return List;
+  return Home;
 }(_react.Component);
 
-var _default = List;
+var _default = Home;
 exports.default = _default;
