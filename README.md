@@ -13,6 +13,7 @@ Next moves:
  - create a NODE.JS api environment;
  - implementing a local development without server side rendering (to speed up the developing time);
  - Redux testing
+ - Code Splitting
 
  # USAGE
  Watching at package.json command, you will find the followings command:
