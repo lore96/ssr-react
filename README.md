@@ -8,6 +8,7 @@ Next moves:
  ✅ SVG Support (to recreate exactly the create react application); (fixed with branch svgImport)
  - fixing localhost:3000/client implementation;
  ✅ set a routing for server side rendering; (fixed with branch routing)
+    - Implementing ss api call before page rendering;
  - create a NODE.JS api environment;
  - implementing a local development without server side rendering (to speed up the developing time);
 
