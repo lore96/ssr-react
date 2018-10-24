@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "express": "^4.16.4",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-loadable": "^5.5.0",
     "react-redux": "^5.0.7",
-    "react-router-config": "^4.4.0-beta.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
     "redux": "^4.0.1",
@@ -35,15 +35,23 @@
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
+    "@babel/helper-module-imports": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
+    "babel-plugin-dynamic-import-node-sync": "^2.0.1",
+    "babel-plugin-dynamic-import-webpack": "^1.1.0",
+    "babel-plugin-import-inspector": "^2.0.0",
     "babel-plugin-inline-react-svg": "^1.0.1",
     "babel-plugin-styled-components": "^1.8.0",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
+    "install": "^0.12.2",
+    "npm": "^6.4.1",
+    "require-ensure": "^1.0.2",
     "webpack-cli": "^3.1.2"
   }
 }

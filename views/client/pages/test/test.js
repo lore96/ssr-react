@@ -9,7 +9,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _LogoIcon = _interopRequireDefault(require("../../components/LogoIcon/LogoIcon"));
+var _NewComponent = _interopRequireDefault(require("../../components/NewComponent/NewComponent"));
 
 var _reactRouterDom = require("react-router-dom");
 
@@ -64,9 +64,7 @@ function (_Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(HomeContainer, null, _react.default.createElement(HomeHeader, null, _react.default.createElement(_LogoIcon.default, {
-        color: "#61DAFB"
-      }), _react.default.createElement("p", null, "Hi, I'm your react home page!"), _react.default.createElement(HomeLink, {
+      return _react.default.createElement(HomeContainer, null, _react.default.createElement(HomeHeader, null, _react.default.createElement(_NewComponent.default, null), _react.default.createElement(HomeLink, {
         href: "/newroute"
       }, "Switch Page"), _react.default.createElement(_reactRouterDom.NavLink, {
         to: "/newroute"

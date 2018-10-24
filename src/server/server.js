@@ -36,6 +36,8 @@ module.exports = function render(initialState, applicationRoute, callback) {
             </Loadable.Capture>
         );
 
+        console.log('Modules, ', modules);
+
         let bundles = getBundles(stats, modules);
 
         const styleTags = sheet.getStyleTags();

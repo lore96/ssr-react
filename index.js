@@ -4,6 +4,11 @@ const template = require('./views/server/template');
 const path = require('path');
 const Loadable = require('react-loadable');
 
+require('babel-core').transform('code', {
+    plugins: ['dynamic-import-node']
+});
+
+
 // Serving static files
 app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
 app.use('/media', express.static(path.resolve(__dirname, 'media')));
@@ -13,13 +18,14 @@ app.disable('x-powered-by');
 
 // start the server
 Loadable.preloadAll().then(() => {
-    app.listen(process.env.PORT || 3000);
-}, () => {console.log(
-    `Node server started at 
-        - SSR: http://localhost:3000; 
-        - CR: http://localhost:3000/client; 
-        - Shutdown: http://localhost:3000/exit`
-)});
+    app.listen(process.env.PORT || 3000, () => {
+        console.log(
+        `Node server started at 
+            - SSR: http://localhost:3000; 
+            - CR: http://localhost:3000/client; 
+            - Shutdown: http://localhost:3000/exit`
+    )});
+});
 
 // our apps data model
 const data = require('./public/data.json');
