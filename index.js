@@ -24,13 +24,13 @@ let initialState = {
 const ssr = require('./views/server');
 
 // server rendered home page
-app.get('/', (req, res) => {
-
-    const { preloadedState, content, styleTags} = ssr(initialState);
-
-    const response = template("Server Rendered Page", preloadedState, styleTags, content);
-    res.setHeader('Cache-Control', 'assets, max-age=604800');
-    res.send(response);
+app.get('*', (req, res, next) => {
+    
+    ssr(initialState, {req, res, next}, (preloadedState, content, styleTags, data) => {
+        const response = template("Server Rendered Page", preloadedState, styleTags, content, data);
+        res.setHeader('Cache-Control', 'assets, max-age=604800');
+        res.send(response);
+    });
 });
 
 // Pure client side rendered page

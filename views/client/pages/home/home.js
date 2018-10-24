@@ -7,21 +7,15 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _routes = _interopRequireDefault(require("../shared/routes"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _reactRouterDom = require("react-router-dom");
+var _LogoIcon = _interopRequireDefault(require("../../components/LogoIcon/LogoIcon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -39,40 +33,57 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var App =
+// Our single Styled Component definition
+// const EmojiContainerDiv = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   font-size: 40px;
+//   background: linear-gradient(20deg, rgb(219, 112, 147), #daa357);
+// `;
+var HomeContainer = _styledComponents.default.div.withConfig({
+  displayName: "home__HomeContainer",
+  componentId: "k3f4av-0"
+})(["text-align:center;"]);
+
+var HomeHeader = _styledComponents.default.div.withConfig({
+  displayName: "home__HomeHeader",
+  componentId: "k3f4av-1"
+})(["background-color:#282c34;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;"]);
+
+var HomeLink = _styledComponents.default.a.withConfig({
+  displayName: "home__HomeLink",
+  componentId: "k3f4av-2"
+})(["color:#61dafb;"]);
+
+var Home =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(App, _Component);
+  _inherits(Home, _Component);
 
-  function App() {
-    _classCallCheck(this, App);
+  function Home() {
+    _classCallCheck(this, Home);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
   }
 
-  _createClass(App, [{
+  _createClass(Home, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _routes.default.map(function (_ref) {
-        var path = _ref.path,
-            exact = _ref.exact,
-            C = _ref.component,
-            rest = _objectWithoutProperties(_ref, ["path", "exact", "component"]);
-
-        return _react.default.createElement(_reactRouterDom.Route, {
-          key: path,
-          path: path,
-          exact: exact,
-          render: function render(props) {
-            return _react.default.createElement(C, _extends({}, props, rest));
-          }
-        });
-      }));
+      // return (<EmojiContainerDiv><span role="img" aria-label="emoji">💅</span></EmojiContainerDiv>
+      return _react.default.createElement(HomeContainer, null, _react.default.createElement(HomeHeader, null, _react.default.createElement(_LogoIcon.default, null), _react.default.createElement("p", null, "Hi, I'm your react home page!"), _react.default.createElement(HomeLink, {
+        href: "https://reactjs.org",
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }, "Learn React")));
     }
   }]);
 
-  return App;
+  return Home;
 }(_react.Component);
 
-var _default = App;
+var _default = Home;
 exports.default = _default;
