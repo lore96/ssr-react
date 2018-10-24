@@ -27,29 +27,10 @@ const ssr = require('./views/server');
 app.get('*', (req, res, next) => {
     
     ssr(initialState, {req, res, next}, (content, preloadedState, styleTags, data) => {
-        console.error('@@@', content);
         const response = template("Server Rendered Page", preloadedState, styleTags, content, data);
         res.setHeader('Cache-Control', 'assets, max-age=604800');
         res.send(response);
     });
-});
-
-// Pure client side rendered page
-app.get('/client', (req, res) => {
-    let response = template('Client Side Rendered page')
-    res.setHeader('Cache-Control', 'assets, max-age=604800')
-    res.send(response);
-});
-
-// tiny trick to stop server during local development
-
-app.get('/exit', (req, res) => {
-    if(process.env.PORT) {
-        res.send("Sorry, the server denies your request")
-    } else {
-        res.send("shutting down")
-        process.exit(0)
-    }
 });
 
 console.log(
