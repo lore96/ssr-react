@@ -2,7 +2,7 @@
 import Home from '../client/pages/home/home';
 import newRoute from '../client/pages/newRoute/newRoute';
 
-const routes =  [
+const routes = [
   {
     path: '/',
     exact: true,

@@ -8,7 +8,7 @@ const AnotherContainer = styled.div`
 `;
 
 const AnotherHeader = styled.div`
-    background-color: #282c34;
+    background-color: #8b0000;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@ const AnotherHeader = styled.div`
 `;
 
 const AnotherLink = styled.a`
-    color: #61dafb;
+    color: #ff0000;
 `;
 
 class newRoute extends Component {
@@ -27,7 +27,7 @@ class newRoute extends Component {
     return(
       <AnotherContainer>
         <AnotherHeader>
-          <LogoIcon />
+          <LogoIcon color="#ff0000"/>
           <p>
             Hi, I'm another react page!
           </p>

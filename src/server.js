@@ -27,7 +27,7 @@ module.exports = function render(initialState, applicationRoute, callback) {
                 </StaticRouter>
             </Provider>
         );
-    
+
         const styleTags = sheet.getStyleTags();
     
         const preloadedState = store.getState();

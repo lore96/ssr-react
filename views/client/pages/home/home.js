@@ -33,17 +33,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-// Our single Styled Component definition
-// const EmojiContainerDiv = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-//   font-size: 40px;
-//   background: linear-gradient(20deg, rgb(219, 112, 147), #daa357);
-// `;
 var HomeContainer = _styledComponents.default.div.withConfig({
   displayName: "home__HomeContainer",
   componentId: "k3f4av-0"
@@ -73,8 +62,9 @@ function (_Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      // return (<EmojiContainerDiv><span role="img" aria-label="emoji">💅</span></EmojiContainerDiv>
-      return _react.default.createElement(HomeContainer, null, _react.default.createElement(HomeHeader, null, _react.default.createElement(_LogoIcon.default, null), _react.default.createElement("p", null, "Hi, I'm your react home page!"), _react.default.createElement(HomeLink, {
+      return _react.default.createElement(HomeContainer, null, _react.default.createElement(HomeHeader, null, _react.default.createElement(_LogoIcon.default, {
+        color: "#61DAFB"
+      }), _react.default.createElement("p", null, "Hi, I'm your react home page!"), _react.default.createElement(HomeLink, {
         href: "/newroute"
       }, "Switch Page")));
     }

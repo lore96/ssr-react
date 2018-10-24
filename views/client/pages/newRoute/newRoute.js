@@ -41,12 +41,12 @@ var AnotherContainer = _styledComponents.default.div.withConfig({
 var AnotherHeader = _styledComponents.default.div.withConfig({
   displayName: "newRoute__AnotherHeader",
   componentId: "sc-79knqa-1"
-})(["background-color:#282c34;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;"]);
+})(["background-color:#8b0000;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;"]);
 
 var AnotherLink = _styledComponents.default.a.withConfig({
   displayName: "newRoute__AnotherLink",
   componentId: "sc-79knqa-2"
-})(["color:#61dafb;"]);
+})(["color:#ff0000;"]);
 
 var newRoute =
 /*#__PURE__*/
@@ -62,7 +62,9 @@ function (_Component) {
   _createClass(newRoute, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(AnotherContainer, null, _react.default.createElement(AnotherHeader, null, _react.default.createElement(_LogoIcon.default, null), _react.default.createElement("p", null, "Hi, I'm another react page!"), _react.default.createElement(AnotherLink, {
+      return _react.default.createElement(AnotherContainer, null, _react.default.createElement(AnotherHeader, null, _react.default.createElement(_LogoIcon.default, {
+        color: "#ff0000"
+      }), _react.default.createElement("p", null, "Hi, I'm another react page!"), _react.default.createElement(AnotherLink, {
         href: "/"
       }, "Go home")));
     }

@@ -3,18 +3,6 @@ import styled from 'styled-components';
 
 import LogoIcon from '../../components/LogoIcon/LogoIcon';
 
-// Our single Styled Component definition
-// const EmojiContainerDiv = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-//   font-size: 40px;
-//   background: linear-gradient(20deg, rgb(219, 112, 147), #daa357);
-// `;
-
 const HomeContainer = styled.div`
     text-align: center;
 `;
@@ -36,11 +24,10 @@ const HomeLink = styled.a`
 
 class Home extends Component {
   render() {
-    // return (<EmojiContainerDiv><span role="img" aria-label="emoji">💅</span></EmojiContainerDiv>
     return(
       <HomeContainer>
         <HomeHeader>
-          <LogoIcon />
+          <LogoIcon color="#61DAFB" />
           <p>
             Hi, I'm your react home page!
           </p>

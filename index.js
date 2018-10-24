@@ -26,7 +26,8 @@ const ssr = require('./views/server');
 // server rendered home page
 app.get('*', (req, res, next) => {
     
-    ssr(initialState, {req, res, next}, (preloadedState, content, styleTags, data) => {
+    ssr(initialState, {req, res, next}, (content, preloadedState, styleTags, data) => {
+        console.error('@@@', content);
         const response = template("Server Rendered Page", preloadedState, styleTags, content, data);
         res.setHeader('Cache-Control', 'assets, max-age=604800');
         res.send(response);
