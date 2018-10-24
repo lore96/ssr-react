@@ -33,55 +33,43 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-// Our single Styled Component definition
-// const EmojiContainerDiv = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-//   font-size: 40px;
-//   background: linear-gradient(20deg, rgb(219, 112, 147), #daa357);
-// `;
-var HomeContainer = _styledComponents.default.div.withConfig({
-  displayName: "home__HomeContainer",
-  componentId: "k3f4av-0"
+var AnotherContainer = _styledComponents.default.div.withConfig({
+  displayName: "newRoute__AnotherContainer",
+  componentId: "sc-79knqa-0"
 })(["text-align:center;"]);
 
-var HomeHeader = _styledComponents.default.div.withConfig({
-  displayName: "home__HomeHeader",
-  componentId: "k3f4av-1"
+var AnotherHeader = _styledComponents.default.div.withConfig({
+  displayName: "newRoute__AnotherHeader",
+  componentId: "sc-79knqa-1"
 })(["background-color:#282c34;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;"]);
 
-var HomeLink = _styledComponents.default.a.withConfig({
-  displayName: "home__HomeLink",
-  componentId: "k3f4av-2"
+var AnotherLink = _styledComponents.default.a.withConfig({
+  displayName: "newRoute__AnotherLink",
+  componentId: "sc-79knqa-2"
 })(["color:#61dafb;"]);
 
-var Home =
+var newRoute =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Home, _Component);
+  _inherits(newRoute, _Component);
 
-  function Home() {
-    _classCallCheck(this, Home);
+  function newRoute() {
+    _classCallCheck(this, newRoute);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(newRoute).apply(this, arguments));
   }
 
-  _createClass(Home, [{
+  _createClass(newRoute, [{
     key: "render",
     value: function render() {
-      // return (<EmojiContainerDiv><span role="img" aria-label="emoji">💅</span></EmojiContainerDiv>
-      return _react.default.createElement(HomeContainer, null, _react.default.createElement(HomeHeader, null, _react.default.createElement(_LogoIcon.default, null), _react.default.createElement("p", null, "Hi, I'm your react home page!"), _react.default.createElement(HomeLink, {
-        href: "/newroute"
-      }, "Switch Page")));
+      return _react.default.createElement(AnotherContainer, null, _react.default.createElement(AnotherHeader, null, _react.default.createElement(_LogoIcon.default, null), _react.default.createElement("p", null, "Hi, I'm another react page!"), _react.default.createElement(AnotherLink, {
+        href: "/"
+      }, "Go home")));
     }
   }]);
 
-  return Home;
+  return newRoute;
 }(_react.Component);
 
-var _default = Home;
+var _default = newRoute;
 exports.default = _default;

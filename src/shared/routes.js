@@ -1,6 +1,6 @@
 // shared/routes.js
 import Home from '../client/pages/home/home';
-import List from '../client/pages/list/list';
+import newRoute from '../client/pages/newRoute/newRoute';
 
 const routes =  [
   {
@@ -9,8 +9,8 @@ const routes =  [
     component: Home,
   },
   {
-    path: '/list/:id',
-    component: List,
+    path: '/newroute',
+    component: newRoute,
   }
 ]
 

@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _home = _interopRequireDefault(require("../client/pages/home/home"));
 
-var _list = _interopRequireDefault(require("../client/pages/list/list"));
+var _newRoute = _interopRequireDefault(require("../client/pages/newRoute/newRoute"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17,8 +17,8 @@ var routes = [{
   exact: true,
   component: _home.default
 }, {
-  path: '/list/:id',
-  component: _list.default
+  path: '/newroute',
+  component: _newRoute.default
 }];
 var _default = routes;
 exports.default = _default;

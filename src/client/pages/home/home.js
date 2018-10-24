@@ -45,7 +45,7 @@ class Home extends Component {
             Hi, I'm your react home page!
           </p>
           <HomeLink
-            href="/list/id"
+            href="/newroute"
           >
             Switch Page
           </HomeLink>
