@@ -45,7 +45,9 @@ function (_Component) {
   _createClass(List, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("ul", null, _react.default.createElement("li", null, "1"), _react.default.createElement("li", null, "2"), _react.default.createElement("li", null, "3"), _react.default.createElement("li", null, "4"), _react.default.createElement("li", null, "5"));
+      return _react.default.createElement("div", null, _react.default.createElement("a", {
+        href: "/"
+      }, "Go home"), _react.default.createElement("ul", null, _react.default.createElement("li", null, "1"), _react.default.createElement("li", null, "2"), _react.default.createElement("li", null, "3"), _react.default.createElement("li", null, "4"), _react.default.createElement("li", null, "5")));
     }
   }]);
 

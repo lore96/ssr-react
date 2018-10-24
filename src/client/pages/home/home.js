@@ -45,11 +45,9 @@ class Home extends Component {
             Hi, I'm your react home page!
           </p>
           <HomeLink
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/list/id"
           >
-            Learn React
+            Switch Page
           </HomeLink>
         </HomeHeader>
       </HomeContainer>

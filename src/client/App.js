@@ -6,13 +6,13 @@ class App extends Component {
   render() {
     return(
       <div>
-        {routes.map(({ path, exact, component: C, ...rest }) => (
+        {routes.map(({ path, exact, component: Page, ...rest }) => (
             <Route
               key={path}
               path={path}
               exact={exact}
               render={(props) => (
-                <C {...props} {...rest} />
+                <Page {...props} {...rest} />
               )}
             />
           ))}

@@ -75,10 +75,8 @@ function (_Component) {
     value: function render() {
       // return (<EmojiContainerDiv><span role="img" aria-label="emoji">💅</span></EmojiContainerDiv>
       return _react.default.createElement(HomeContainer, null, _react.default.createElement(HomeHeader, null, _react.default.createElement(_LogoIcon.default, null), _react.default.createElement("p", null, "Hi, I'm your react home page!"), _react.default.createElement(HomeLink, {
-        href: "https://reactjs.org",
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, "Learn React")));
+        href: "/list/id"
+      }, "Switch Page")));
     }
   }]);
 

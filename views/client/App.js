@@ -56,7 +56,7 @@ function (_Component) {
       return _react.default.createElement("div", null, _routes.default.map(function (_ref) {
         var path = _ref.path,
             exact = _ref.exact,
-            C = _ref.component,
+            Page = _ref.component,
             rest = _objectWithoutProperties(_ref, ["path", "exact", "component"]);
 
         return _react.default.createElement(_reactRouterDom.Route, {
@@ -64,7 +64,7 @@ function (_Component) {
           path: path,
           exact: exact,
           render: function render(props) {
-            return _react.default.createElement(C, _extends({}, props, rest));
+            return _react.default.createElement(Page, _extends({}, props, rest));
           }
         });
       }));
