@@ -1,5 +1,4 @@
 import express from 'express';
-import db from './db/db';
 import bodyParser from 'body-parser';
 import serverGet from './server/server-get';
 import serverPost from './server/server-post';
