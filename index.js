@@ -4,6 +4,7 @@ const template = require('./views/server/template');
 const path = require('path');
 const Loadable = require('react-loadable');
 
+/* TO FIX REQUIRE ENSURE OF WEBPACK TRANSPILE */
 let proto = Object.getPrototypeOf(require);
 !proto.hasOwnProperty("ensure") && Object.defineProperties(proto, {
     "ensure": {
