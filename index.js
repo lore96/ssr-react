@@ -3,6 +3,8 @@ const app = express();
 const template = require('./views/server/template');
 const path = require('path');
 const Loadable = require('react-loadable');
+const data = require('./public/data.json');
+const ssr = require('./views/server/server');
 
 /* TO FIX REQUIRE ENSURE OF WEBPACK TRANSPILE */
 let proto = Object.getPrototypeOf(require);
@@ -23,6 +25,8 @@ let proto = Object.getPrototypeOf(require);
 // Serving static files
 app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
 app.use('/media', express.static(path.resolve(__dirname, 'media')));
+app.use('/public', express.static(path.resolve(__dirname, 'public')));
+
 
 // hide powered by express
 app.disable('x-powered-by');
@@ -38,23 +42,13 @@ Loadable.preloadAll().then(() => {
     )});
 });
 
-// our apps data model
-const data = require('./public/data.json');
-
 let initialState = {
     isFetching: false,
     apps: data
 }
 
-//SSR function import
-const ssr = require('./views/server/server');
-
-app.use('/public', express.static('public'));
-
 // server rendered home page
 app.get('*', (req, res, next) => {
-    
-    
     ssr(initialState, {req, res, next}, (content, preloadedState, styleTags, data, bundles) => {
         const response = template("Server Rendered Page", preloadedState, styleTags, content, data, bundles);
         res.setHeader('Cache-Control', 'assets, max-age=604800');
