@@ -8,9 +8,11 @@ function template(title, initialState = {}, styles, content = "", data, bundles)
                      window.__STATE__ = ${JSON.stringify(initialState)}
                   </script>
                   <script>window.__INITIAL_DATA__ = ${serialize(dataToRender)}</script>
+                  <script src="../../assets/client.js"></script>
                   `
     } else {
-      scripts = `<script>window.__INITIAL_DATA__ = ${serialize(dataToRender)}</script>`
+      scripts = `<script>window.__INITIAL_DATA__ = ${serialize(dataToRender)}</script>
+                  <script src="../../assets/client.js"></script>`
     }
     
     let page = `<!DOCTYPE html>
@@ -18,6 +20,8 @@ function template(title, initialState = {}, styles, content = "", data, bundles)
                 <head>
                   <meta charset="utf-8">
                   <title> ${title} </title>
+                  <link rel="shortcut icon" href="/public/favicon.ico">
+
                   ${styles}
                 </head>
                 <body>
@@ -27,6 +31,7 @@ function template(title, initialState = {}, styles, content = "", data, bundles)
                      </div>
                   </div>
                     ${bundles.map(bundle => {
+                      console.log('Loading chunk', bundle);
                       return `<script src="../../assets/${bundle.file}"></script>`
                       // alternatively if you are using publicPath option in webpack config
                       // you can use the publicPath value from bundle, e.g:

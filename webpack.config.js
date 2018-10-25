@@ -8,12 +8,14 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'assets'),
+    chunkFilename: "[name].chunk.js",
+    publicPath: 'assets/',
     filename: "[name].js"
   },
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
-      { test: /\.(ttf|eot|otf|svg|png|jpg|gif)$/, loader: 'file-loader' }
+      { test: /\.(ttf|eot|otf|svg|png|jpg|gif|ico)$/, loader: 'file-loader' }
     ]
   }, 
   plugins: [

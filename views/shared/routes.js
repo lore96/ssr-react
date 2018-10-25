@@ -15,7 +15,9 @@ var HomeComponent = (0, _reactLoadable.default)({
   loader: function loader() {
     return new Promise(function (resolve) {
       require.ensure([], function (require) {
-        resolve(require("../client/pages/home/home"));
+        resolve(require("../client/pages/home/home"
+        /* webpackChunkName: "../assets/Home" */
+        ));
       });
     });
   },
@@ -31,7 +33,9 @@ var NewRouteComponent = (0, _reactLoadable.default)({
   loader: function loader() {
     return new Promise(function (resolve) {
       require.ensure([], function (require) {
-        resolve(require("../client/pages/newRoute/newRoute"));
+        resolve(require("../client/pages/newRoute/newRoute"
+        /* webpackChunkName: "../assets/NewRouteComponent" */
+        ));
       });
     });
   },
@@ -47,7 +51,9 @@ var test = (0, _reactLoadable.default)({
   loader: function loader() {
     return new Promise(function (resolve) {
       require.ensure([], function (require) {
-        resolve(require("../client/pages/test/test"));
+        resolve(require("../client/pages/test/test"
+        /* webpackChunkName: "../assets/test" */
+        ));
       });
     });
   },

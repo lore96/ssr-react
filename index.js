@@ -49,8 +49,11 @@ let initialState = {
 //SSR function import
 const ssr = require('./views/server/server');
 
+app.use('/public', express.static('public'));
+
 // server rendered home page
 app.get('*', (req, res, next) => {
+    
     
     ssr(initialState, {req, res, next}, (content, preloadedState, styleTags, data, bundles) => {
         const response = template("Server Rendered Page", preloadedState, styleTags, content, data, bundles);

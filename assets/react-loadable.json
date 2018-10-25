@@ -3,72 +3,72 @@
     {
       "id": 36,
       "name": "./node_modules/styled-components/dist/styled-components.browser.esm.js",
-      "file": "0.js",
-      "publicPath": "0.js"
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
     }
   ],
   "./../../process/browser.js": [
     {
       "id": 38,
       "name": "./node_modules/process/browser.js",
-      "file": "0.js",
-      "publicPath": "0.js"
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
     }
   ],
   "stylis/stylis.min": [
     {
       "id": 39,
       "name": "./node_modules/stylis/stylis.min.js",
-      "file": "0.js",
-      "publicPath": "0.js"
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
     }
   ],
   "stylis-rule-sheet": [
     {
       "id": 40,
       "name": "./node_modules/stylis-rule-sheet/index.js",
-      "file": "0.js",
-      "publicPath": "0.js"
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
     }
   ],
   "react-is": [
     {
       "id": 41,
       "name": "./node_modules/react-is/index.js",
-      "file": "0.js",
-      "publicPath": "0.js"
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
     }
   ],
   "./cjs/react-is.production.min.js": [
     {
       "id": 42,
       "name": "./node_modules/react-is/cjs/react-is.production.min.js",
-      "file": "0.js",
-      "publicPath": "0.js"
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
     }
   ],
   "memoize-one": [
     {
       "id": 43,
       "name": "./node_modules/memoize-one/dist/memoize-one.esm.js",
-      "file": "0.js",
-      "publicPath": "0.js"
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
     }
   ],
   "@emotion/is-prop-valid": [
     {
       "id": 44,
       "name": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.esm.js",
-      "file": "0.js",
-      "publicPath": "0.js"
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
     }
   ],
   "./NavLink": [
     {
       "id": 45,
       "name": "./node_modules/react-router-dom/es/NavLink.js",
-      "file": "0.js",
-      "publicPath": "0.js"
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
     }
   ],
   "prop-types": [
@@ -76,13 +76,13 @@
       "id": 0,
       "name": "./node_modules/prop-types/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 0,
       "name": "./node_modules/prop-types/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "react": [
@@ -90,13 +90,13 @@
       "id": 1,
       "name": "./node_modules/react/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 1,
       "name": "./node_modules/react/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "warning": [
@@ -104,25 +104,25 @@
       "id": 2,
       "name": "./node_modules/history/node_modules/warning/browser.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 4,
       "name": "./node_modules/warning/warning.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 2,
       "name": "./node_modules/history/node_modules/warning/browser.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     },
     {
       "id": 4,
       "name": "./node_modules/warning/warning.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "invariant": [
@@ -130,13 +130,13 @@
       "id": 3,
       "name": "./node_modules/invariant/browser.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 3,
       "name": "./node_modules/invariant/browser.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "react-loadable": [
@@ -144,13 +144,13 @@
       "id": 5,
       "name": "./node_modules/react-loadable/lib/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 5,
       "name": "./node_modules/react-loadable/lib/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "redux": [
@@ -158,13 +158,13 @@
       "id": 6,
       "name": "./node_modules/redux/es/redux.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 6,
       "name": "./node_modules/redux/es/redux.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "react-router/es/matchPath": [
@@ -172,13 +172,13 @@
       "id": 7,
       "name": "./node_modules/react-router/es/matchPath.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 7,
       "name": "./node_modules/react-router/es/matchPath.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "symbol-observable": [
@@ -186,13 +186,13 @@
       "id": 8,
       "name": "./node_modules/symbol-observable/es/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 8,
       "name": "./node_modules/symbol-observable/es/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "object-assign": [
@@ -200,13 +200,13 @@
       "id": 9,
       "name": "./node_modules/object-assign/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 9,
       "name": "./node_modules/object-assign/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./../../webpack/buildin/global.js": [
@@ -214,13 +214,13 @@
       "id": 10,
       "name": "./node_modules/webpack/buildin/global.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 10,
       "name": "./node_modules/webpack/buildin/global.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "react-dom": [
@@ -228,13 +228,13 @@
       "id": 11,
       "name": "./node_modules/react-dom/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 11,
       "name": "./node_modules/react-dom/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "history": [
@@ -242,13 +242,13 @@
       "id": 12,
       "name": "./node_modules/history/es/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 12,
       "name": "./node_modules/history/es/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "hoist-non-react-statics": [
@@ -256,13 +256,13 @@
       "id": 13,
       "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 13,
       "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./_freeGlobal.js": [
@@ -270,13 +270,13 @@
       "id": 14,
       "name": "./node_modules/lodash-es/_freeGlobal.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 14,
       "name": "./node_modules/lodash-es/_freeGlobal.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./ponyfill.js": [
@@ -284,13 +284,13 @@
       "id": 15,
       "name": "./node_modules/symbol-observable/es/ponyfill.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 15,
       "name": "./node_modules/symbol-observable/es/ponyfill.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "path-to-regexp": [
@@ -298,13 +298,13 @@
       "id": 16,
       "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 16,
       "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "react-redux": [
@@ -312,13 +312,13 @@
       "id": 17,
       "name": "./node_modules/react-redux/es/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 17,
       "name": "./node_modules/react-redux/es/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "../redux/configureStore": [
@@ -326,13 +326,13 @@
       "id": 18,
       "name": "./src/redux/configureStore.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 18,
       "name": "./src/redux/configureStore.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "../client/App": [
@@ -340,13 +340,13 @@
       "id": 19,
       "name": "./src/client/App.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 19,
       "name": "./src/client/App.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./../../webpack/buildin/harmony-module.js": [
@@ -354,13 +354,13 @@
       "id": 21,
       "name": "./node_modules/webpack/buildin/harmony-module.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 21,
       "name": "./node_modules/webpack/buildin/harmony-module.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./cjs/react.production.min.js": [
@@ -368,13 +368,13 @@
       "id": 22,
       "name": "./node_modules/react/cjs/react.production.min.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 22,
       "name": "./node_modules/react/cjs/react.production.min.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./cjs/react-dom.production.min.js": [
@@ -382,13 +382,13 @@
       "id": 23,
       "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 23,
       "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "scheduler": [
@@ -396,13 +396,13 @@
       "id": 24,
       "name": "./node_modules/scheduler/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 24,
       "name": "./node_modules/scheduler/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./cjs/scheduler.production.min.js": [
@@ -410,13 +410,13 @@
       "id": 25,
       "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 25,
       "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./factoryWithThrowingShims": [
@@ -424,13 +424,13 @@
       "id": 26,
       "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 26,
       "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./lib/ReactPropTypesSecret": [
@@ -438,13 +438,13 @@
       "id": 27,
       "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 27,
       "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "isarray": [
@@ -452,13 +452,13 @@
       "id": 28,
       "name": "./node_modules/isarray/index.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 28,
       "name": "./node_modules/isarray/index.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./Route": [
@@ -466,13 +466,13 @@
       "id": 32,
       "name": "./node_modules/react-router-dom/es/Route.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 32,
       "name": "./node_modules/react-router-dom/es/Route.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./BrowserRouter": [
@@ -480,13 +480,13 @@
       "id": 33,
       "name": "./node_modules/react-router-dom/es/BrowserRouter.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     },
     {
       "id": 33,
       "name": "./node_modules/react-router-dom/es/BrowserRouter.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "./src/server/client.js": [
@@ -494,7 +494,7 @@
       "id": 34,
       "name": "./src/server/client.js",
       "file": "client.js",
-      "publicPath": "client.js"
+      "publicPath": "assets/client.js"
     }
   ],
   "./src/server/bundle.js": [
@@ -502,51 +502,51 @@
       "id": 35,
       "name": "./src/server/bundle.js",
       "file": "bundle.js",
-      "publicPath": "bundle.js"
+      "publicPath": "assets/bundle.js"
     }
   ],
   "../client/pages/home/home": [
     {
       "id": 29,
       "name": "./src/client/pages/home/home.js",
-      "file": "3.js",
-      "publicPath": "3.js"
+      "file": "3.chunk.js",
+      "publicPath": "assets/3.chunk.js"
     }
   ],
   "../../components/LogoIcon/LogoIcon": [
     {
       "id": 37,
       "name": "./src/client/components/LogoIcon/LogoIcon.js",
-      "file": "3.js",
-      "publicPath": "3.js"
+      "file": "3.chunk.js",
+      "publicPath": "assets/3.chunk.js"
     },
     {
       "id": 37,
       "name": "./src/client/components/LogoIcon/LogoIcon.js",
-      "file": "4.js",
-      "publicPath": "4.js"
+      "file": "4.chunk.js",
+      "publicPath": "assets/4.chunk.js"
     },
     {
       "id": 37,
       "name": "./src/client/components/LogoIcon/LogoIcon.js",
-      "file": "5.js",
-      "publicPath": "5.js"
+      "file": "5.chunk.js",
+      "publicPath": "assets/5.chunk.js"
     }
   ],
   "../client/pages/newRoute/newRoute": [
     {
       "id": 30,
       "name": "./src/client/pages/newRoute/newRoute.js",
-      "file": "4.js",
-      "publicPath": "4.js"
+      "file": "4.chunk.js",
+      "publicPath": "assets/4.chunk.js"
     }
   ],
   "../client/pages/test/test": [
     {
       "id": 31,
       "name": "./src/client/pages/test/test.js",
-      "file": "5.js",
-      "publicPath": "5.js"
+      "file": "5.chunk.js",
+      "publicPath": "assets/5.chunk.js"
     }
   ]
 }
