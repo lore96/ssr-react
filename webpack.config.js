@@ -4,7 +4,7 @@ const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugi
 module.exports = {
   entry: {
     client: './src/server/client.js',
-    bundle: './src/server/bundle.js'
+    // bundle: './src/server/bundle.js'
   },
   output: {
     path: path.resolve(__dirname, 'assets'),

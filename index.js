@@ -21,12 +21,10 @@ let proto = Object.getPrototypeOf(require);
     }
 });
 
-
 // Serving static files
 app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
 app.use('/media', express.static(path.resolve(__dirname, 'media')));
 app.use('/public', express.static(path.resolve(__dirname, 'public')));
-
 
 // hide powered by express
 app.disable('x-powered-by');

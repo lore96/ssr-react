@@ -1,27 +1,19 @@
+// import React from 'react'
+// import {render} from 'react-dom'
+// import {Provider} from 'react-redux'
+// import configureStore from '../redux/configureStore'
+// import App from '../client/App';
+// import { BrowserRouter } from 'react-router-dom';
+// import Loadable from 'react-loadable';
+// const store = configureStore();
+// Loadable.preloadReady().then(() => {
+//   render(
+//       <Provider store={store} >
+//         <BrowserRouter>
+//         <App fetchedData={window.__INITIAL_DATA__}/>
+//         </BrowserRouter>
+//       </Provider>,
+//       document.querySelector('#root')
+//   );
+// })
 "use strict";
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactDom = require("react-dom");
-
-var _reactRedux = require("react-redux");
-
-var _configureStore = _interopRequireDefault(require("../redux/configureStore"));
-
-var _App = _interopRequireDefault(require("../client/App"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _reactLoadable = _interopRequireDefault(require("react-loadable"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var store = (0, _configureStore.default)();
-
-_reactLoadable.default.preloadReady().then(function () {
-  (0, _reactDom.render)(_react.default.createElement(_reactRedux.Provider, {
-    store: store
-  }, _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_App.default, {
-    fetchedData: window.__INITIAL_DATA__
-  }))), document.querySelector('#root'));
-});
