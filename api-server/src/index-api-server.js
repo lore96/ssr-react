@@ -5,6 +5,7 @@ import serverPost from './server/server-post';
 import serverGetSingle from './server/server-get-single';
 import serverDelete from './server/server-delete';
 import serverPut from './server/server-put';
+import testget from './server/api/v1/testget/';
 
 // Set up the express app
 const app = express();
@@ -12,6 +13,8 @@ const app = express();
 // Parse incoming requests data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use('/testget', testget);
 
 // get all DB
 app.get('/api/v1/db', (req, res) => {
