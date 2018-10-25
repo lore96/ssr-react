@@ -4,8 +4,18 @@ const template = require('./views/server/template');
 const path = require('path');
 const Loadable = require('react-loadable');
 
-require('babel-core').transform('code', {
-    plugins: ['dynamic-import-node']
+let proto = Object.getPrototypeOf(require);
+!proto.hasOwnProperty("ensure") && Object.defineProperties(proto, {
+    "ensure": {
+        value: function ensure(modules, callback) {
+            callback(this);
+        },
+        writable: false
+    },
+    "include": {
+        value: function include() {},
+        writable: false
+    }
 });
 
 

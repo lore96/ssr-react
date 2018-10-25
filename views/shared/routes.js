@@ -11,12 +11,12 @@ var _reactLoadable = _interopRequireDefault(require("react-loadable"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
 var HomeComponent = (0, _reactLoadable.default)({
   loader: function loader() {
-    return Promise.resolve().then(function () {
-      return _interopRequireWildcard(require("../client/pages/home/home"));
+    return new Promise(function (resolve) {
+      require.ensure([], function (require) {
+        resolve(require("../client/pages/home/home"));
+      });
     });
   },
   modules: ["../client/pages/home/home"],
@@ -29,8 +29,10 @@ var HomeComponent = (0, _reactLoadable.default)({
 });
 var NewRouteComponent = (0, _reactLoadable.default)({
   loader: function loader() {
-    return Promise.resolve().then(function () {
-      return _interopRequireWildcard(require("../client/pages/newRoute/newRoute"));
+    return new Promise(function (resolve) {
+      require.ensure([], function (require) {
+        resolve(require("../client/pages/newRoute/newRoute"));
+      });
     });
   },
   modules: ["../client/pages/newRoute/newRoute"],
@@ -43,8 +45,10 @@ var NewRouteComponent = (0, _reactLoadable.default)({
 });
 var test = (0, _reactLoadable.default)({
   loader: function loader() {
-    return Promise.resolve().then(function () {
-      return _interopRequireWildcard(require("../client/pages/test/test"));
+    return new Promise(function (resolve) {
+      require.ensure([], function (require) {
+        resolve(require("../client/pages/test/test"));
+      });
     });
   },
   modules: ["../client/pages/test/test"],

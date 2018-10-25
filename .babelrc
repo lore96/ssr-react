@@ -1,7 +1,7 @@
 {
     "presets": ["@babel/env", "@babel/react"],
     "plugins": [
-        "dynamic-import-node",
+        "dynamic-import-webpack",
         "inline-react-svg",
         "babel-plugin-styled-components",
         "react-loadable/babel"
