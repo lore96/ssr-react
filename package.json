@@ -21,7 +21,8 @@
     "pack": "webpack --config webpack.config.js",
     "babel": "babel src -d views",
     "build": "npm run pack && npm run babel",
-    "prepareSsr": "npm run babel && npm run pack && npm run ssr-start"
+    "ssr-prepare": "npm run babel && npm run pack && npm run ssr-start",
+    "start-api-server": "cd api-server && npm run start-api-server"
   },
   "eslintConfig": {
     "extends": "react-app"
