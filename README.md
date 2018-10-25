@@ -1,7 +1,7 @@
 # SERVER SIDE RENDERING REACT-APP
 Here you have an example of a ssr application renderizing a create-react-app.
 
-At the final step you should be able to have **Redux** + **Styled Component** + **React router DOM** + **Node js Api** in a single awesome application!
+At the final step you should be able to have **Redux** + **Styled Component** + **React router DOM** + **React Helmet** + **Node js Api** in a single awesome application!
 
 Next moves: 
  
@@ -13,7 +13,9 @@ Next moves:
  - create a NODE.JS api environment;
  - implementing a local development without server side rendering (to speed up the developing time);
  - Redux testing
- - Code Splitting
+
+ ✅ Code Splitting
+
  - Helmet
 
  # USAGE
