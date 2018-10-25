@@ -9,7 +9,9 @@
     "author": "l.mussi96@gmail.com",
     "license": "ISC",
     "babel": {
-        "presets": ["@babel/env"]
+        "presets": [
+            "@babel/env"
+        ]
     },
     "dependencies": {
         "@babel/cli": "^7.1.2",
