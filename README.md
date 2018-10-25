@@ -29,3 +29,4 @@ Next moves:
 # Articles
 - Server side rendering: https://medium.freecodecamp.org/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e
 - Server side styled-component: https://medium.com/styled-components/the-simple-guide-to-server-side-rendering-react-with-styled-components-d31c6b2b8fbf
+- Code splitting with react-loadable: https://github.com/jamiebuilds/react-loadable
