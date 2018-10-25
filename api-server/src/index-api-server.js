@@ -16,30 +16,30 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // get all DB
 app.get('/api/v1/db', (req, res) => {
-    serverGet(res, db);
+    serverGet(res);
 });
 
 //POST to db
 app.post('/api/v1/db', (req, res) => {
-    serverPost(req, res, db);
+    serverPost(req, res);
 });
 
 app.get('/api/v1/db/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
 
-    serverGetSingle(res, db, id);
+    serverGetSingle(res, id);
 });
 
 app.delete('/api/v1/db/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
 
-    serverDelete(res, db, id);
+    serverDelete(res, id);
 });
 
 app.put('/api/v1/db/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
 
-    serverPut(req, res, db, id);
+    serverPut(req, res, id);
 });
 
 const PORT = 5000;

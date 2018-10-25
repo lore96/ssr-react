@@ -1,4 +1,6 @@
-export default (req, res, db, id) => {
+import db from '../db/db'
+
+export default (req, res, id) => {
     let resourceFound;
     let itemIndex;
   

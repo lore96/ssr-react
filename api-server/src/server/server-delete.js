@@ -1,5 +1,6 @@
+import db from '../db/db'
 
-export default (res, db, id) => {
+export default (res, id) => {
     db.map((dbToDelet, index) => {
         if (dbToDelet.id === id) {
             db.splice(index, 1);

@@ -1,4 +1,6 @@
-export default ( res, db, id) => {
+import db from '../db/db'
+
+export default (res, id) => {
     db.map((resource) => {
         if (resource.id === id) {
             return res.status(200).send({

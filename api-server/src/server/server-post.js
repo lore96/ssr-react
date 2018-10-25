@@ -1,5 +1,6 @@
-export default (req, res, db) => {
-    
+import db from '../db/db'
+
+export default (req, res) => {
     if(!req.body.title) {
         return res.status(400).send({
             success: 'false',
