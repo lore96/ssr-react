@@ -16,7 +16,7 @@ Next moves:
 
  ✅ Code Splitting
 
- - Helmet
+ ✅  Helmet
 
  # USAGE
  Watching at package.json command, you will find the followings command:
