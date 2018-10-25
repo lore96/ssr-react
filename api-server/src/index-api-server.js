@@ -1,6 +1,11 @@
 import express from 'express';
 import db from './db/db';
 import bodyParser from 'body-parser';
+import serverGet from './server/server-get';
+import serverPost from './server/server-post';
+import serverGetSingle from './server/server-get-single';
+import serverDelete from './server/server-delete';
+import serverPut from './server/server-put';
 
 // Set up the express app
 const app = express();
@@ -11,136 +16,34 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // get all DB
 app.get('/api/v1/db', (req, res) => {
-  res.status(200).send({
-    success: 'true',
-    message: 'db retrieved successfully',
-    db: db
-  })
+    serverGet(res, db);
 });
 
 //POST to db
 app.post('/api/v1/db', (req, res) => {
-  if(!req.body.title) {
-    return res.status(400).send({
-      success: 'false',
-      message: 'title is required'
-    });
-  } else if(!req.body.description) {
-    return res.status(400).send({
-      success: 'false',
-      message: 'description is required'
-    });
-  }
-
- const newDb = {
-   id: db.length + 1,
-   title: req.body.title,
-   description: req.body.description
- }
-
- db.push(newDb);
- 
- return res.status(201).send({
-   success: 'true',
-   message: 'todo added successfully',
-   newDb
- })
+    serverPost(req, res, db);
 });
 
 app.get('/api/v1/db/:id', (req, res) => {
-  const id = parseInt(req.params.id, 10);
+    const id = parseInt(req.params.id, 10);
 
-  db.map((single) => {
-    if (single.id === id) {
-      return res.status(200).send({
-        success: 'true',
-        code: '200',
-        message: single.id + 'retrieved successfully',
-        single,
-      });
-    }
-  });
-
-  return res.status(404).send({
-    success: 'false',
-    code: '404',
-    message:  +'404 Not found',
-  });
+    serverGetSingle(res, db, id);
 });
 
 app.delete('/api/v1/db/:id', (req, res) => {
-  const id = parseInt(req.params.id, 10);
+    const id = parseInt(req.params.id, 10);
 
-  db.map((dbToDelet, index) => {
-    if (dbToDelet.id === id) {
-       db.splice(index, 1);
-       return res.status(200).send({
-         success: 'true',
-         code: 200,
-         message: 'dbToDelet deleted successfuly',
-       });
-    }
-  });
-
-    return res.status(404).send({
-      success: 'false',
-      code: '404',
-      message: '404 not found',
-    });
+    serverDelete(res, db, id);
 });
 
 app.put('/api/v1/db/:id', (req, res) => {
-  const id = parseInt(req.params.id, 10);
+    const id = parseInt(req.params.id, 10);
 
-  let resourceFound;
-  let itemIndex;
-
-  db.map((resource, index) => {
-    if (resource.id === id) {
-      resourceFound = resource;
-      itemIndex = index;
-    }
-  });
-
-  if (!resourceFound) {
-    return res.status(404).send({
-      success: 'false',
-      code: '404',
-      message: 'resource not found',
-    });
-  }
-
-  if (!req.body.title) {
-    return res.status(400).send({
-      success: 'false',
-      code: '404',
-      message: 'title is required',
-    });
-  } else if (!req.body.description) {
-    return res.status(400).send({
-      success: 'false',
-      code: '404',
-      message: 'description is required',
-    });
-  }
-
-  const updatedDb = {
-    id: resourceFound.id,
-    title: req.body.title || resourceFound.title,
-    description: req.body.description || resourceFound.description,
-  };
-
-  db.splice(itemIndex, 1, updatedDb);
-
-  return res.status(201).send({
-    success: 'true',
-    message: 'resource added successfully',
-    updatedDb,
-  });
+    serverPut(req, res, db, id);
 });
 
 const PORT = 5000;
 
 app.listen(PORT, () => {
-  console.log(`server running on port ${PORT}`)
+    console.log(`server running on port ${PORT}`)
 });
