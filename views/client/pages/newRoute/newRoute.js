@@ -13,6 +13,8 @@ var _LogoIcon = _interopRequireDefault(require("../../components/LogoIcon/LogoIc
 
 var _reactRouterDom = require("react-router-dom");
 
+var _reactHelmet = _interopRequireDefault(require("react-helmet"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -64,13 +66,15 @@ function (_Component) {
   _createClass(newRoute, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(AnotherContainer, null, _react.default.createElement(AnotherHeader, null, _react.default.createElement(_LogoIcon.default, {
+      return _react.default.createElement("div", null, _react.default.createElement(_reactHelmet.default, {
+        title: "Welcome to a new Route"
+      }), _react.default.createElement(AnotherContainer, null, _react.default.createElement(AnotherHeader, null, _react.default.createElement(_LogoIcon.default, {
         color: "#ff0000"
       }), _react.default.createElement("p", null, "Hi, I'm another react page!"), _react.default.createElement(AnotherLink, {
         href: "/"
       }, "Go home"), _react.default.createElement(_reactRouterDom.NavLink, {
         to: "/"
-      }, "Go home with Link")));
+      }, "Go home with Link"))));
     }
   }]);
 

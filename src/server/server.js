@@ -12,6 +12,8 @@ import Loadable from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack'
 import stats from '../../assets/react-loadable.json';
 
+import Helmet from 'react-helmet';
+
 
 module.exports = function render(initialState, applicationRoute, callback) {
     const activeRoute = routes.find((route) => matchPath(applicationRoute.req.url, route)) || {};
@@ -43,8 +45,10 @@ module.exports = function render(initialState, applicationRoute, callback) {
         const styleTags = sheet.getStyleTags();
     
         const preloadedState = store.getState();
+
+        const helmet = Helmet.renderStatic();
     
-        callback(content, preloadedState, styleTags, data, bundles);
+        callback(content, preloadedState, styleTags, data, bundles, helmet);
     }).catch(applicationRoute.next);
 
    

@@ -1,7 +1,7 @@
 {
   "styled-components": [
     {
-      "id": 25,
+      "id": 34,
       "name": "./node_modules/styled-components/dist/styled-components.browser.esm.js",
       "file": "0.chunk.js",
       "publicPath": "assets/0.chunk.js"
@@ -9,7 +9,7 @@
   ],
   "./../../process/browser.js": [
     {
-      "id": 28,
+      "id": 37,
       "name": "./node_modules/process/browser.js",
       "file": "0.chunk.js",
       "publicPath": "assets/0.chunk.js"
@@ -17,15 +17,23 @@
   ],
   "stylis/stylis.min": [
     {
-      "id": 29,
+      "id": 38,
       "name": "./node_modules/stylis/stylis.min.js",
+      "file": "0.chunk.js",
+      "publicPath": "assets/0.chunk.js"
+    }
+  ],
+  "stylis-rule-sheet": [
+    {
+      "id": 39,
+      "name": "./node_modules/stylis-rule-sheet/index.js",
       "file": "0.chunk.js",
       "publicPath": "assets/0.chunk.js"
     }
   ],
   "react-is": [
     {
-      "id": 30,
+      "id": 40,
       "name": "./node_modules/react-is/index.js",
       "file": "0.chunk.js",
       "publicPath": "assets/0.chunk.js"
@@ -33,7 +41,7 @@
   ],
   "./cjs/react-is.production.min.js": [
     {
-      "id": 31,
+      "id": 41,
       "name": "./node_modules/react-is/cjs/react-is.production.min.js",
       "file": "0.chunk.js",
       "publicPath": "assets/0.chunk.js"
@@ -41,23 +49,15 @@
   ],
   "memoize-one": [
     {
-      "id": 32,
+      "id": 42,
       "name": "./node_modules/memoize-one/dist/memoize-one.esm.js",
-      "file": "0.chunk.js",
-      "publicPath": "assets/0.chunk.js"
-    }
-  ],
-  "stylis-rule-sheet": [
-    {
-      "id": 36,
-      "name": "./node_modules/stylis-rule-sheet/index.js",
       "file": "0.chunk.js",
       "publicPath": "assets/0.chunk.js"
     }
   ],
   "@emotion/is-prop-valid": [
     {
-      "id": 38,
+      "id": 47,
       "name": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.esm.js",
       "file": "0.chunk.js",
       "publicPath": "assets/0.chunk.js"
@@ -65,7 +65,7 @@
   ],
   "./NavLink": [
     {
-      "id": 39,
+      "id": 48,
       "name": "./node_modules/react-router-dom/es/NavLink.js",
       "file": "0.chunk.js",
       "publicPath": "assets/0.chunk.js"
@@ -125,41 +125,57 @@
       "publicPath": "assets/client.js"
     }
   ],
-  "symbol-observable": [
-    {
-      "id": 7,
-      "name": "./node_modules/symbol-observable/es/index.js",
-      "file": "client.js",
-      "publicPath": "assets/client.js"
-    }
-  ],
   "object-assign": [
     {
-      "id": 8,
+      "id": 7,
       "name": "./node_modules/object-assign/index.js",
-      "file": "client.js",
-      "publicPath": "assets/client.js"
-    }
-  ],
-  "react-dom": [
-    {
-      "id": 9,
-      "name": "./node_modules/react-dom/index.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
     }
   ],
   "./../../webpack/buildin/global.js": [
     {
-      "id": 10,
+      "id": 8,
       "name": "./node_modules/webpack/buildin/global.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "symbol-observable": [
+    {
+      "id": 9,
+      "name": "./node_modules/symbol-observable/es/index.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "react-helmet": [
+    {
+      "id": 10,
+      "name": "./node_modules/react-helmet/lib/Helmet.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "react-dom": [
+    {
+      "id": 11,
+      "name": "./node_modules/react-dom/index.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "./HelmetConstants.js": [
+    {
+      "id": 12,
+      "name": "./node_modules/react-helmet/lib/HelmetConstants.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
     }
   ],
   "history": [
     {
-      "id": 11,
+      "id": 13,
       "name": "./node_modules/history/es/index.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -167,7 +183,7 @@
   ],
   "hoist-non-react-statics": [
     {
-      "id": 12,
+      "id": 14,
       "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -175,7 +191,7 @@
   ],
   "./_freeGlobal.js": [
     {
-      "id": 13,
+      "id": 15,
       "name": "./node_modules/lodash-es/_freeGlobal.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -183,7 +199,7 @@
   ],
   "./ponyfill.js": [
     {
-      "id": 14,
+      "id": 16,
       "name": "./node_modules/symbol-observable/es/ponyfill.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -191,7 +207,7 @@
   ],
   "path-to-regexp": [
     {
-      "id": 15,
+      "id": 17,
       "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -199,7 +215,7 @@
   ],
   "./../../webpack/buildin/harmony-module.js": [
     {
-      "id": 17,
+      "id": 19,
       "name": "./node_modules/webpack/buildin/harmony-module.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -207,7 +223,7 @@
   ],
   "./cjs/react.production.min.js": [
     {
-      "id": 18,
+      "id": 20,
       "name": "./node_modules/react/cjs/react.production.min.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -215,7 +231,7 @@
   ],
   "./cjs/react-dom.production.min.js": [
     {
-      "id": 19,
+      "id": 21,
       "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -223,7 +239,7 @@
   ],
   "scheduler": [
     {
-      "id": 20,
+      "id": 22,
       "name": "./node_modules/scheduler/index.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -231,7 +247,7 @@
   ],
   "./cjs/scheduler.production.min.js": [
     {
-      "id": 21,
+      "id": 23,
       "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -239,7 +255,7 @@
   ],
   "./factoryWithThrowingShims": [
     {
-      "id": 22,
+      "id": 24,
       "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -247,15 +263,71 @@
   ],
   "./lib/ReactPropTypesSecret": [
     {
-      "id": 23,
+      "id": 25,
       "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "react-side-effect": [
+    {
+      "id": 26,
+      "name": "./node_modules/react-side-effect/lib/index.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "exenv": [
+    {
+      "id": 27,
+      "name": "./node_modules/exenv/index.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "shallowequal": [
+    {
+      "id": 28,
+      "name": "./node_modules/shallowequal/index.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "deep-equal": [
+    {
+      "id": 29,
+      "name": "./node_modules/deep-equal/index.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "./lib/keys.js": [
+    {
+      "id": 30,
+      "name": "./node_modules/deep-equal/lib/keys.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "./lib/is_arguments.js": [
+    {
+      "id": 31,
+      "name": "./node_modules/deep-equal/lib/is_arguments.js",
+      "file": "client.js",
+      "publicPath": "assets/client.js"
+    }
+  ],
+  "./HelmetUtils.js": [
+    {
+      "id": 32,
+      "name": "./node_modules/react-helmet/lib/HelmetUtils.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
     }
   ],
   "isarray": [
     {
-      "id": 24,
+      "id": 33,
       "name": "./node_modules/isarray/index.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -263,7 +335,7 @@
   ],
   "./src/server/client.js": [
     {
-      "id": 35,
+      "id": 45,
       "name": "./src/server/client.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -271,7 +343,7 @@
   ],
   "./Route": [
     {
-      "id": 37,
+      "id": 46,
       "name": "./node_modules/react-router-dom/es/Route.js",
       "file": "client.js",
       "publicPath": "assets/client.js"
@@ -279,19 +351,19 @@
   ],
   "../../components/LogoIcon/LogoIcon": [
     {
-      "id": 26,
+      "id": 35,
       "name": "./src/client/components/LogoIcon/LogoIcon.js",
       "file": "2.chunk.js",
       "publicPath": "assets/2.chunk.js"
     },
     {
-      "id": 26,
+      "id": 35,
       "name": "./src/client/components/LogoIcon/LogoIcon.js",
       "file": "3.chunk.js",
       "publicPath": "assets/3.chunk.js"
     },
     {
-      "id": 26,
+      "id": 35,
       "name": "./src/client/components/LogoIcon/LogoIcon.js",
       "file": "4.chunk.js",
       "publicPath": "assets/4.chunk.js"
@@ -299,7 +371,7 @@
   ],
   "../client/pages/home/home": [
     {
-      "id": 27,
+      "id": 36,
       "name": "./src/client/pages/home/home.js",
       "file": "2.chunk.js",
       "publicPath": "assets/2.chunk.js"
@@ -307,7 +379,7 @@
   ],
   "../client/pages/newRoute/newRoute": [
     {
-      "id": 33,
+      "id": 43,
       "name": "./src/client/pages/newRoute/newRoute.js",
       "file": "3.chunk.js",
       "publicPath": "assets/3.chunk.js"
@@ -315,7 +387,7 @@
   ],
   "../client/pages/test/test": [
     {
-      "id": 34,
+      "id": 44,
       "name": "./src/client/pages/test/test.js",
       "file": "4.chunk.js",
       "publicPath": "assets/4.chunk.js"

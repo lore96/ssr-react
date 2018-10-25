@@ -1,6 +1,6 @@
 import serialize from "serialize-javascript";
 
-function template(title, initialState = {}, styles, content = "", data, bundles){
+function template(helmet, initialState = {}, styles, content = "", data, bundles){
     let scripts = '';
     const dataToRender = data ? data : {test: true};
     if(content){
@@ -16,15 +16,18 @@ function template(title, initialState = {}, styles, content = "", data, bundles)
     }
     
     let page = `<!DOCTYPE html>
-                <html lang="en">
+                <html ${helmet.htmlAttributes.toString()}>
                 <head>
                   <meta charset="utf-8">
-                  <title> ${title} </title>
+                  ${helmet.title.toString()}
+                  ${helmet.meta.toString()}
+                  ${helmet.link.toString()}
+                  
                   <link rel="shortcut icon" href="/public/favicon.ico">
 
                   ${styles}
                 </head>
-                <body>
+                <body ${helmet.bodyAttributes.toString()}>
                   <div class="content">
                      <div id="root" class="wrap-inner">
                         ${content}

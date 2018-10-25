@@ -22,6 +22,8 @@ var _webpack = require("react-loadable/webpack");
 
 var _reactLoadable2 = _interopRequireDefault(require("../../assets/react-loadable.json"));
 
+var _reactHelmet = _interopRequireDefault(require("react-helmet"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = function render(initialState, applicationRoute, callback) {
@@ -50,6 +52,9 @@ module.exports = function render(initialState, applicationRoute, callback) {
     var bundles = (0, _webpack.getBundles)(_reactLoadable2.default, modules);
     var styleTags = sheet.getStyleTags();
     var preloadedState = store.getState();
-    callback(content, preloadedState, styleTags, data, bundles);
+
+    var helmet = _reactHelmet.default.renderStatic();
+
+    callback(content, preloadedState, styleTags, data, bundles, helmet);
   }).catch(applicationRoute.next);
 };

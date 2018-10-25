@@ -47,8 +47,8 @@ let initialState = {
 
 // server rendered home page
 app.get('*', (req, res, next) => {
-    ssr(initialState, {req, res, next}, (content, preloadedState, styleTags, data, bundles) => {
-        const response = template("Server Rendered Page", preloadedState, styleTags, content, data, bundles);
+    ssr(initialState, {req, res, next}, (content, preloadedState, styleTags, data, bundles, helmet) => {
+        const response = template(helmet, preloadedState, styleTags, content, data, bundles);
         res.setHeader('Cache-Control', 'assets, max-age=604800');
         res.send(response);
     });

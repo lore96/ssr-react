@@ -11,6 +11,8 @@ var _routes = _interopRequireDefault(require("../shared/routes"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _reactHelmet = _interopRequireDefault(require("react-helmet"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -53,7 +55,24 @@ function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Switch, null, _routes.default.map(function (_ref) {
+      return _react.default.createElement("div", null, _react.default.createElement(_reactHelmet.default, {
+        htmlAttributes: {
+          lang: "en",
+          amp: undefined
+        } // amp takes no value
+        ,
+        titleAttributes: {
+          itemprop: "name",
+          lang: "en"
+        },
+        meta: [{
+          name: "description",
+          content: "Server side rendering appllication example"
+        }, {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1"
+        }]
+      }), _react.default.createElement(_reactRouterDom.Switch, null, _routes.default.map(function (_ref) {
         var path = _ref.path,
             exact = _ref.exact,
             Page = _ref.component,

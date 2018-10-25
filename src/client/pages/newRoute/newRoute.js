@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import LogoIcon from '../../components/LogoIcon/LogoIcon';
 import { NavLink } from 'react-router-dom';
 
+import Helmet from 'react-helmet';
+
 
 const AnotherContainer = styled.div`
     text-align: center;
@@ -27,20 +29,24 @@ const AnotherLink = styled.a`
 class newRoute extends Component {
   render() {
     return(
-      <AnotherContainer>
-        <AnotherHeader>
-          <LogoIcon color="#ff0000"/>
-          <p>
-            Hi, I'm another react page!
-          </p>
-          <AnotherLink
-            href="/"
-          >
-            Go home
-          </AnotherLink>
-          <NavLink to="/">Go home with Link</NavLink>
-        </AnotherHeader>
-      </AnotherContainer>
+      <div>
+        <Helmet
+          title="Welcome to a new Route" />
+        <AnotherContainer>
+          <AnotherHeader>
+            <LogoIcon color="#ff0000"/>
+            <p>
+              Hi, I'm another react page!
+            </p>
+            <AnotherLink
+              href="/"
+            >
+              Go home
+            </AnotherLink>
+            <NavLink to="/">Go home with Link</NavLink>
+          </AnotherHeader>
+        </AnotherContainer>
+      </div>
     );
   }
 }
