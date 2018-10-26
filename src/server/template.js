@@ -1,11 +1,11 @@
 import serialize from "serialize-javascript";
 
-function template(helmet, initialState = {}, styles, content = "", data, bundles){
+function template(objToRender){
     let scripts = '';
-    const dataToRender = data ? data : {test: true};
-    if(content){
+    const dataToRender = objToRender.data ? objToRender.data : {test: true};
+    if(objToRender.content){
       scripts = `<script>
-                     window.__STATE__ = ${JSON.stringify(initialState)}
+                     window.__STATE__ = ${JSON.stringify(objToRender.initialState)}
                   </script>
                   <script>window.__INITIAL_DATA__ = ${serialize(dataToRender)}</script>
                   <script src="../../assets/client.js"></script>
@@ -16,24 +16,24 @@ function template(helmet, initialState = {}, styles, content = "", data, bundles
     }
     
     let page = `<!DOCTYPE html>
-                <html ${helmet.htmlAttributes.toString()}>
+                <html ${objToRender.helmet.htmlAttributes.toString()}>
                 <head>
                   <meta charset="utf-8">
-                  ${helmet.title.toString()}
-                  ${helmet.meta.toString()}
-                  ${helmet.link.toString()}
+                  ${objToRender.helmet.title.toString()}
+                  ${objToRender.helmet.meta.toString()}
+                  ${objToRender.helmet.link.toString()}
                   
                   <link rel="shortcut icon" href="/public/favicon.ico">
 
-                  ${styles}
+                  ${objToRender.styles}
                 </head>
-                <body ${helmet.bodyAttributes.toString()}>
+                <body ${objToRender.helmet.bodyAttributes.toString()}>
                   <div class="content">
                      <div id="root" class="wrap-inner">
-                        ${content}
+                        ${objToRender.content}
                      </div>
                   </div>
-                    ${bundles.map(bundle => {
+                    ${objToRender.bundles.map(bundle => {
                       console.log('Loading chunk', bundle);
                       return `<script src="../../assets/${bundle.file}"></script>`
                       // alternatively if you are using publicPath option in webpack config

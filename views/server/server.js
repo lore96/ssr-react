@@ -55,6 +55,14 @@ module.exports = function render(initialState, applicationRoute, callback) {
 
     var helmet = _reactHelmet.default.renderStatic();
 
-    callback(content, preloadedState, styleTags, data, bundles, helmet);
+    var objToRender = {
+      content: content,
+      initialState: preloadedState ? preloadedState : {},
+      styles: styleTags ? styleTags : '',
+      data: data ? data : '',
+      bundles: bundles,
+      helmet: helmet
+    };
+    callback(objToRender);
   }).catch(applicationRoute.next);
 };

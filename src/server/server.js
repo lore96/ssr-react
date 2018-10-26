@@ -47,8 +47,18 @@ module.exports = function render(initialState, applicationRoute, callback) {
         const preloadedState = store.getState();
 
         const helmet = Helmet.renderStatic();
+
+        
+        const objToRender = {
+            content,
+            initialState: preloadedState ? preloadedState : {},
+            styles: styleTags ? styleTags : '',
+            data: data ? data : '',
+            bundles,
+            helmet
+        };
     
-        callback(content, preloadedState, styleTags, data, bundles, helmet);
+        callback(objToRender);
     }).catch(applicationRoute.next);
 
    
