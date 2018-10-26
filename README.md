@@ -5,20 +5,21 @@ At the final step you should be able to have **Redux** + **Styled Component** + 
 
 Next moves: 
  
- ✅ SVG Support (to recreate exactly the create react application); (fixed with branch svgImport)
+ ✅ SVG Support (to recreate exactly the create react application); (implemented with branch svgImport)
  
- ✅ set a routing for server side rendering; (fixed with branch routing)
+ ✅ set a routing for server side rendering; (implemented with branch routing)
     
     - Implementing ss api call before page rendering;
- - create a NODE.JS api environment; (branch serverApi);
+    
+ ✅ create a NODE.JS api environment; (implemented with branch serverApi);
  
  - implementing a local development without server side rendering (to speed up the developing time);
  
  - Redux testing
 
- ✅ Code Splitting; (fixed with branch codeSplitting);
+ ✅ Code Splitting; (implemented with branch codeSplitting);
 
- ✅  Helmet (fixed with branch helmet);
+ ✅  Helmet (implemented with branch helmet);
 
  # USAGE
  Watching at package.json command, you will find the followings command:
