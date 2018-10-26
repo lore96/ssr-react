@@ -24,14 +24,20 @@ var _reactLoadable2 = _interopRequireDefault(require("../../assets/react-loadabl
 
 var _reactHelmet = _interopRequireDefault(require("react-helmet"));
 
+var _serverFetch = _interopRequireDefault(require("./methods/serverFetch"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = function render(initialState, applicationRoute, callback) {
   var activeRoute = _routes.default.find(function (route) {
     return (0, _reactRouterDom.matchPath)(applicationRoute.req.url, route);
   }) || {};
-  var promise = activeRoute.fetchData ? activeRoute.fetchData(applicationRoute.req.path) : Promise.resolve();
-  promise.then(function (data) {
+  console.log('@@@', activeRoute, activeRoute.compileTime);
+  var dataToFetch = activeRoute.compileTime && activeRoute.compileTime.length > 0 ? activeRoute.compileTime : [];
+  var promise = dataToFetch.length > 0 ? dataToFetch.map(function (api) {
+    return (0, _serverFetch.default)(api.url, api.params);
+  }) : [Promise.resolve()];
+  Promise.all(promise).then(function (data) {
     var modules = [];
     var sheet = new _styledComponents.ServerStyleSheet(); // Model the initial state
 

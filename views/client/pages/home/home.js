@@ -57,10 +57,14 @@ var Home =
 function (_Component) {
   _inherits(Home, _Component);
 
-  function Home() {
+  function Home(props) {
+    var _this;
+
     _classCallCheck(this, Home);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this, props));
+    console.log(_this.props, _this.props.compileTime);
+    return _this;
   }
 
   _createClass(Home, [{

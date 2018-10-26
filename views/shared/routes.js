@@ -68,13 +68,21 @@ var test = (0, _reactLoadable.default)({
 var routes = [{
   path: '/',
   exact: true,
-  component: HomeComponent
+  component: HomeComponent,
+  compileTime: [{
+    url: '/api/v1/todos/',
+    params: {
+      id: ''
+    }
+  }]
 }, {
   path: '/newroute',
-  component: NewRouteComponent
+  component: NewRouteComponent,
+  compileTime: []
 }, {
   path: '/test',
-  component: test
+  component: test,
+  compileTime: []
 }];
 var _default = routes;
 exports.default = _default;

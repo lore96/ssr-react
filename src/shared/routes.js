@@ -21,14 +21,24 @@ const routes = [
     path: '/',
     exact: true,
     component: HomeComponent,
+    compileTime: [
+      {
+        url: '/api/v1/todos/',
+        params: {
+          id: ''
+        }
+      }
+    ]
   },
   {
     path: '/newroute',
     component: NewRouteComponent,
+    compileTime: []
   },
   {
     path: '/test', 
-    component: test
+    component: test,
+    compileTime: []
   }
 ]
 

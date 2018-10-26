@@ -1,17 +1,16 @@
-import serialize from "serialize-javascript";
-
 function template(objToRender){
     let scripts = '';
     const dataToRender = objToRender.data ? objToRender.data : {test: true};
+
     if(objToRender.content){
       scripts = `<script>
                      window.__STATE__ = ${JSON.stringify(objToRender.initialState)}
                   </script>
-                  <script>window.__INITIAL_DATA__ = ${serialize(dataToRender)}</script>
+                  <script>window.__INITIAL_DATA__ = ${dataToRender}</script>
                   <script src="../../assets/client.js"></script>
                   `
     } else {
-      scripts = `<script>window.__INITIAL_DATA__ = ${serialize(dataToRender)}</script>
+      scripts = `<script>window.__INITIAL_DATA__ = ${dataToRender}</script>
                   <script src="../../assets/client.js"></script>`
     }
     

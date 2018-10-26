@@ -26,6 +26,11 @@ const HomeLink = styled.a`
 `;
 
 class Home extends Component {
+  constructor(props){
+    super(props);
+    console.log(this.props, this.props.compileTime);
+  }
+
   render() {
     return(
       <div>

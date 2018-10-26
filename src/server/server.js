@@ -13,14 +13,18 @@ import { getBundles } from 'react-loadable/webpack'
 import stats from '../../assets/react-loadable.json';
 
 import Helmet from 'react-helmet';
+import serverFetch from './methods/serverFetch';
 
 
 module.exports = function render(initialState, applicationRoute, callback) {
     const activeRoute = routes.find((route) => matchPath(applicationRoute.req.url, route)) || {};
+    console.log('@@@', activeRoute, activeRoute.compileTime);
 
-    const promise = activeRoute.fetchData ? activeRoute.fetchData(applicationRoute.req.path) : Promise.resolve();
+    const dataToFetch = (activeRoute.compileTime && activeRoute.compileTime.length > 0)  ? activeRoute.compileTime : [];
 
-    promise.then((data) => {
+    const promise = dataToFetch.length > 0 ? dataToFetch.map(api => serverFetch(api.url, api.params)) : [Promise.resolve()];
+
+    Promise.all(promise).then((data) => {
         let modules = [];
 
         const sheet = new ServerStyleSheet();
@@ -48,7 +52,6 @@ module.exports = function render(initialState, applicationRoute, callback) {
 
         const helmet = Helmet.renderStatic();
 
-        
         const objToRender = {
             content,
             initialState: preloadedState ? preloadedState : {},
