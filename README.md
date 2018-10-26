@@ -10,21 +10,23 @@ Next moves:
  ✅ set a routing for server side rendering; (fixed with branch routing)
     
     - Implementing ss api call before page rendering;
- - create a NODE.JS api environment;
+ - create a NODE.JS api environment; (branch serverApi);
+ 
  - implementing a local development without server side rendering (to speed up the developing time);
+ 
  - Redux testing
 
- ✅ Code Splitting
+ ✅ Code Splitting; (fixed with branch codeSplitting);
 
- ✅  Helmet
+ ✅  Helmet (fixed with branch helmet);
 
  # USAGE
  Watching at package.json command, you will find the followings command:
-  - **ssr-start**: start the serve side rendering (with the fils you will find inside the ./assets folder);
+  - **ssr-start**: start the serve side rendering (with the files you will find inside the ./assets folder);
   - **pack**: create the build in ./assets folder;
-  - **babel**: transpile all js code that use es6 and JSX to make able node to read it;
-  - **build**: pack + babel, create the build but not serve it;
-  - **prepare**: create the build and serve it on localhost:3000;
+  - **babel**: transpile all js code that use es6 and JSX in client to make able node to read it, generating the views folder;
+  - **build**: pack + babel, create the all the stuff you need to serve it (this will not start the server);
+  - **prepare**: create the build and serve it on http://localhost:3000;
 
 # Articles
 - Server side rendering: https://medium.freecodecamp.org/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e
