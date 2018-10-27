@@ -34,7 +34,7 @@ module.exports = function render(initialState, applicationRoute, callback) {
   }) || {};
   var dataToFetch = activeRoute.compileTime && activeRoute.compileTime.length > 0 ? activeRoute.compileTime : [];
   var promise = dataToFetch.length > 0 ? dataToFetch.map(function (api) {
-    return (0, _serverFetch.default)(api.url, api.params);
+    return (0, _serverFetch.default)(api.url, api.params).catch(applicationRoute.next);
   }) : [];
   Promise.all(promise).then(function (resp) {
     var data = resp && resp.length > 0 ? resp.map(function (single) {
@@ -56,7 +56,6 @@ module.exports = function render(initialState, applicationRoute, callback) {
     }, sheet.collectStyles(_react.default.createElement(_App.default, {
       fetchedData: data
     }))))));
-    console.log('Modules, ', modules);
     var bundles = (0, _webpack.getBundles)(_reactLoadable2.default, modules);
     var styleTags = sheet.getStyleTags();
     var preloadedState = store.getState();

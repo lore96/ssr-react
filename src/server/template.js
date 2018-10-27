@@ -34,7 +34,6 @@ function template(objToRender){
                      </div>
                   </div>
                     ${objToRender.bundles.map(bundle => {
-                      console.log('Loading chunk', bundle);
                       return `<script src="../../assets/${bundle.file}"></script>`
                       // alternatively if you are using publicPath option in webpack config
                       // you can use the publicPath value from bundle, e.g:

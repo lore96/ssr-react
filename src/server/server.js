@@ -22,7 +22,7 @@ module.exports = function render(initialState, applicationRoute, callback) {
 
     const dataToFetch = (activeRoute.compileTime && activeRoute.compileTime.length > 0)  ? activeRoute.compileTime : [];
 
-    const promise = dataToFetch.length > 0 ? dataToFetch.map(api => serverFetch(api.url, api.params)) : [];
+    const promise = dataToFetch.length > 0 ? dataToFetch.map(api => serverFetch(api.url, api.params).catch(applicationRoute.next)) : [];
 
     Promise.all(promise).then((resp) => {
 
@@ -46,8 +46,6 @@ module.exports = function render(initialState, applicationRoute, callback) {
             </Loadable.Capture>
         );
 
-        console.log('Modules, ', modules);
-
         let bundles = getBundles(stats, modules);
 
         const styleTags = sheet.getStyleTags();
@@ -67,6 +65,5 @@ module.exports = function render(initialState, applicationRoute, callback) {
     
         callback(objToRender);
     }).catch(applicationRoute.next);
-
    
 }
