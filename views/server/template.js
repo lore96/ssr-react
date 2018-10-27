@@ -5,7 +5,7 @@ function template(objToRender) {
   var dataToRender = objToRender.data ? JSON.stringify(objToRender.data) : JSON.stringify([]);
 
   if (objToRender.content) {
-    scripts = "<script>\n                     window.__STATE__ = ".concat(objToRender.initialState, "\n                  </script>\n                  <script>window.__INITIAL_DATA__ = ").concat(dataToRender, "</script>\n                  <script src=\"../../assets/client.js\"></script>\n                  ");
+    scripts = "<script>\n                     window.__STATE__ = ".concat(JSON.stringify(objToRender.initialState), "\n                  </script>\n                  <script>window.__INITIAL_DATA__ = ").concat(dataToRender, "</script>\n                  <script src=\"../../assets/client.js\"></script>\n                  ");
   } else {
     scripts = "<script>window.__INITIAL_DATA__ = ".concat(dataToRender, "</script>\n                  <script src=\"../../assets/client.js\"></script>");
   }

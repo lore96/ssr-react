@@ -18,12 +18,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var state = window.__STATE__;
 delete window.__STATE__;
+var initialData = window.__INITIAL_DATA__;
 var store = (0, _configureStore.default)(state);
+delete window.__INITIAL_DATA__;
+delete window.__STATE__;
 
 _reactLoadable.default.preloadReady().then(function () {
   (0, _reactDom.hydrate)(_react.default.createElement(_reactRedux.Provider, {
     store: store
   }, _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_App.default, {
-    fetchedData: window.__INITIAL_DATA__
+    fetchedData: initialData
   }))), document.getElementById('root'));
 });

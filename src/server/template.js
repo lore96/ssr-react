@@ -5,7 +5,7 @@ function template(objToRender){
 
     if(objToRender.content){
       scripts = `<script>
-                     window.__STATE__ = ${objToRender.initialState}
+                     window.__STATE__ = ${JSON.stringify(objToRender.initialState)}
                   </script>
                   <script>window.__INITIAL_DATA__ = ${dataToRender}</script>
                   <script src="../../assets/client.js"></script>

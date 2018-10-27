@@ -8,13 +8,17 @@ import Loadable from 'react-loadable';
 
 const state = window.__STATE__;
 delete window.__STATE__;
-const store = configureStore(state)
+const initialData = window.__INITIAL_DATA__;
+const store = configureStore(state);
+
+delete window.__INITIAL_DATA__;
+delete window.__STATE__;
 
 Loadable.preloadReady().then(() => {
   hydrate(
     <Provider store={store} >
       <BrowserRouter>
-        <App fetchedData={window.__INITIAL_DATA__} />
+        <App fetchedData={initialData} />
       </BrowserRouter>
     </Provider>,
     document.getElementById('root')
