@@ -31,7 +31,15 @@ class Home extends Component {
     console.log(this.props, this.props.compileTime);
   }
 
+  componentDidMount(){
+    fetch(`http://localhost:5000${this.props.compileTime[0].url}`, this.props.compileTime[0].params).then(resp => resp.json())
+    .then(resp => {
+      console.log(resp);
+    })
+  }
+
   render() {
+
     return(
       <div>
         <Helmet

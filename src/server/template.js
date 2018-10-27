@@ -1,10 +1,11 @@
 function template(objToRender){
     let scripts = '';
-    const dataToRender = objToRender.data ? objToRender.data : {test: true};
+    
+    const dataToRender = objToRender.data ? JSON.stringify(objToRender.data) : JSON.stringify([]);
 
     if(objToRender.content){
       scripts = `<script>
-                     window.__STATE__ = ${JSON.stringify(objToRender.initialState)}
+                     window.__STATE__ = ${objToRender.initialState}
                   </script>
                   <script>window.__INITIAL_DATA__ = ${dataToRender}</script>
                   <script src="../../assets/client.js"></script>

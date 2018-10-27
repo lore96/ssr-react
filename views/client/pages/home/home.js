@@ -68,6 +68,15 @@ function (_Component) {
   }
 
   _createClass(Home, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      fetch("http://localhost:5000".concat(this.props.compileTime[0].url), this.props.compileTime[0].params).then(function (resp) {
+        return resp.json();
+      }).then(function (resp) {
+        console.log(resp);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement(_reactHelmet.default, {

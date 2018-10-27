@@ -8,6 +8,8 @@ var _reactRedux = require("react-redux");
 
 var _configureStore = _interopRequireDefault(require("../redux/configureStore"));
 
+var _jsonStringifySafe = _interopRequireDefault(require("json-stringify-safe"));
+
 var _App = _interopRequireDefault(require("../client/App"));
 
 var _styledComponents = require("styled-components");
@@ -36,8 +38,12 @@ module.exports = function render(initialState, applicationRoute, callback) {
   var dataToFetch = activeRoute.compileTime && activeRoute.compileTime.length > 0 ? activeRoute.compileTime : [];
   var promise = dataToFetch.length > 0 ? dataToFetch.map(function (api) {
     return (0, _serverFetch.default)(api.url, api.params);
-  }) : [Promise.resolve()];
-  Promise.all(promise).then(function (data) {
+  }) : [];
+  Promise.all(promise).then(function (resp) {
+    console.log('@@@@, new route data', resp);
+    var data = resp && resp.length > 0 ? resp.map(function (single) {
+      return single.data;
+    }) : [];
     var modules = [];
     var sheet = new _styledComponents.ServerStyleSheet(); // Model the initial state
 
@@ -61,6 +67,7 @@ module.exports = function render(initialState, applicationRoute, callback) {
 
     var helmet = _reactHelmet.default.renderStatic();
 
+    console.log('@@', data);
     var objToRender = {
       content: content,
       initialState: preloadedState ? preloadedState : {},

@@ -2,6 +2,8 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
 import configureStore from '../redux/configureStore';
+
+import stringify from 'json-stringify-safe';
 import App from '../client/App';
 
 import { ServerStyleSheet } from 'styled-components';
@@ -22,9 +24,14 @@ module.exports = function render(initialState, applicationRoute, callback) {
 
     const dataToFetch = (activeRoute.compileTime && activeRoute.compileTime.length > 0)  ? activeRoute.compileTime : [];
 
-    const promise = dataToFetch.length > 0 ? dataToFetch.map(api => serverFetch(api.url, api.params)) : [Promise.resolve()];
+    const promise = dataToFetch.length > 0 ? dataToFetch.map(api => serverFetch(api.url, api.params)) : [];
 
-    Promise.all(promise).then((data) => {
+    Promise.all(promise).then((resp) => {
+        console.log('@@@@, new route data', resp);
+
+        const data = (resp && resp.length > 0) ? resp.map(single => single.data) : [];
+
+
         let modules = [];
 
         const sheet = new ServerStyleSheet();
@@ -51,6 +58,7 @@ module.exports = function render(initialState, applicationRoute, callback) {
         const preloadedState = store.getState();
 
         const helmet = Helmet.renderStatic();
+        console.log('@@', data);
 
         const objToRender = {
             content,
