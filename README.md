@@ -13,7 +13,7 @@ Next moves:
     
  ✅ create a NODE.JS api environment; (implemented with branch serverApi);
  
- - Implementing a static error page for server error;
+ ✅ Implementing a static error page for server error;
  
  - implementing a local development without server side rendering (to speed up the developing time);
  
