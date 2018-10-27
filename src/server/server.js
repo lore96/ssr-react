@@ -19,14 +19,12 @@ import serverFetch from './methods/serverFetch';
 
 module.exports = function render(initialState, applicationRoute, callback) {
     const activeRoute = routes.find((route) => matchPath(applicationRoute.req.url, route)) || {};
-    console.log('@@@', activeRoute, activeRoute.compileTime);
 
     const dataToFetch = (activeRoute.compileTime && activeRoute.compileTime.length > 0)  ? activeRoute.compileTime : [];
 
     const promise = dataToFetch.length > 0 ? dataToFetch.map(api => serverFetch(api.url, api.params)) : [];
 
     Promise.all(promise).then((resp) => {
-        console.log('@@@@, new route data', resp);
 
         const data = (resp && resp.length > 0) ? resp.map(single => single.data) : [];
 
@@ -57,7 +55,6 @@ module.exports = function render(initialState, applicationRoute, callback) {
         const preloadedState = store.getState();
 
         const helmet = Helmet.renderStatic();
-        console.log('@@', data);
 
         const objToRender = {
             content,

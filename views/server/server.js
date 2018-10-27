@@ -32,13 +32,11 @@ module.exports = function render(initialState, applicationRoute, callback) {
   var activeRoute = _routes.default.find(function (route) {
     return (0, _reactRouterDom.matchPath)(applicationRoute.req.url, route);
   }) || {};
-  console.log('@@@', activeRoute, activeRoute.compileTime);
   var dataToFetch = activeRoute.compileTime && activeRoute.compileTime.length > 0 ? activeRoute.compileTime : [];
   var promise = dataToFetch.length > 0 ? dataToFetch.map(function (api) {
     return (0, _serverFetch.default)(api.url, api.params);
   }) : [];
   Promise.all(promise).then(function (resp) {
-    console.log('@@@@, new route data', resp);
     var data = resp && resp.length > 0 ? resp.map(function (single) {
       return single.data;
     }) : [];
@@ -65,7 +63,6 @@ module.exports = function render(initialState, applicationRoute, callback) {
 
     var helmet = _reactHelmet.default.renderStatic();
 
-    console.log('@@', data);
     var objToRender = {
       content: content,
       initialState: preloadedState ? preloadedState : {},
