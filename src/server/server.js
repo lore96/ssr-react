@@ -3,7 +3,6 @@ import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
 import configureStore from '../redux/configureStore';
 
-import stringify from 'json-stringify-safe';
 import App from '../client/App';
 
 import { ServerStyleSheet } from 'styled-components';

@@ -8,8 +8,6 @@ var _reactRedux = require("react-redux");
 
 var _configureStore = _interopRequireDefault(require("../redux/configureStore"));
 
-var _jsonStringifySafe = _interopRequireDefault(require("json-stringify-safe"));
-
 var _App = _interopRequireDefault(require("../client/App"));
 
 var _styledComponents = require("styled-components");
