@@ -9,7 +9,7 @@ module.exports = function hanldeError(error, req, res, next) {
 
   };
 
-  if (error.response.status) {
+  if (error && error.response && error.response.status) {
     console.log('axios error: ', error.response);
     errorToHandle.code = errorToHandle.response.status.toString(); // errorToHandle.url = error.response.config.url;
   }
