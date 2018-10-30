@@ -13,9 +13,9 @@ Next moves:
     
  ✅ create a NODE.JS api environment; (implemented with branch serverApi);
  
- ✅ Implementing a static error page for server error;
+ ✅ Implementing a static error page for server error; (implemented with branch staticError)
  
- - implementing a local development without server side rendering (to speed up the developing time);
+ ✅ implementing a local development without server side rendering (to speed up the developing time); (implemented with branch devServer);
  
  - Redux testing
 
@@ -30,7 +30,8 @@ Next moves:
   - **babel**: transpile all js code that use es6 and JSX in client to make able node to read it, generating the views folder;
   - **build**: pack + babel, create the all the stuff you need to serve it (this will not start the server);
   - **ssr-prepare**: create the build and serve it on http://localhost:3000;
-  - **cd api-server && start-api-server** to run api server on http://localhost:5000
+  - **cd api-server && start-api-server**: to run api server on http://localhost:5000
+  - **start-dev-server**: to run webpack dev server for local development (no server rendering)
 
 # Articles
 - Server side rendering: https://medium.freecodecamp.org/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e
